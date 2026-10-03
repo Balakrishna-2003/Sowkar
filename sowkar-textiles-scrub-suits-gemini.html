@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SOWKAR TEXTILES & UNIFORMS — Scrub Suits</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <meta name="theme-color" content="#031d2b">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Urbanist:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* =========================================================
+           SCRUB SUITS PAGE — BESPOKE STYLES
+           Uses only existing fonts, colours & spacing rhythm
+           ========================================================= */
+
+        /* ---------- HERO ---------- */
+        .scrub-hero {
+            position: relative;
+            width: 100%;
+            min-height: 680px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            isolation: isolate;
+            background:
+                radial-gradient(circle at 78% 38%, rgba(155, 63, 143, 0.24), transparent 38%),
+                radial-gradient(circle at 88% 15%, rgba(201, 75, 92, 0.18), transparent 28%),
+                radial-gradient(circle at 14% 82%, rgba(104, 26, 102, 0.26), transparent 34%),
+                linear-gradient(125deg, #0e0714 0%, #1b0c23 48%, #25102d 100%);
+        }
+
+        .scrub-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(to right, rgba(234, 220, 240, 0.035) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(234, 220, 240, 0.035) 1px, transparent 1px);
+            background-size: 44px 44px;
+            mask-image: radial-gradient(ellipse at 65% 50%, black 35%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at 65% 50%, black 35%, transparent 80%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .scrub-hero .container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .scrub-hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 560px;
+        }
+
+        .scrub-hero-breadcrumb {
+            margin-bottom: 16px;
+            opacity: 0;
+            animation: scrubFadeDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+        }
+
+        .scrub-crumb-list {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 14px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 30px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            list-style: none;
+            margin: 0;
+        }
+
+        .scrub-crumb-item {
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2.2px;
+            text-transform: uppercase;
+        }
+
+        .scrub-crumb-item a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .scrub-crumb-item a:hover {
+            color: #E77A88;
+        }
+
+        .scrub-crumb-sep {
+            color: rgba(201, 75, 92, 0.6);
+            font-size: 11px;
+        }
+
+        .scrub-crumb-item.active {
+            color: #E77A88;
+            font-weight: 700;
+        }
+
+        .scrub-hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            opacity: 0;
+            animation: scrubFadeDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+        }
+
+        .scrub-label-pill {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #C94B5C;
+            box-shadow: 0 0 10px #C94B5C;
+            animation: scrubDotGlow 2s infinite ease-in-out;
+        }
+
+        @keyframes scrubDotGlow {
+            0%, 100% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 6px #C94B5C; }
+            50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 14px #E77A88; }
+        }
+
+        .scrub-label-text {
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 3.2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.70);
+        }
+
+        .scrub-label-line {
+            width: 45px;
+            height: 1px;
+            background: linear-gradient(90deg, #C94B5C, #C98BC2);
+        }
+
+        .scrub-hero-heading {
+            margin: 0 0 6px;
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(48px, 4.8vw, 78px);
+            font-weight: 900;
+            line-height: .92;
+            letter-spacing: -3px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        .scrub-heading-line {
+            display: block;
+            overflow: hidden;
+            padding-bottom: 4px;
+        }
+
+        .scrub-heading-line > span {
+            display: inline-block;
+            transform: translateY(110%);
+            animation: scrubTextReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .scrub-heading-line:nth-child(1) > span { animation-delay: 0.35s; }
+        .scrub-heading-line:nth-child(2) > span { animation-delay: 0.5s; }
+
+        .scrub-text-gradient {
+            color: #C98BC2;
+            background: linear-gradient(135deg, #FFFFFF 20%, #C98BC2 60%, #E77A88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .scrub-text-highlight {
+            color: #E77A88;
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+            font-weight: 600;
+            text-transform: capitalize;
+            letter-spacing: -1px;
+            -webkit-text-fill-color: initial;
+        }
+
+        .scrub-hero-tagline {
+            margin-top: 8px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.85);
+            opacity: 0;
+            animation: scrubFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.65s forwards;
+        }
+
+        .scrub-hero-tagline span {
+            color: #E77A88;
+        }
+
+        .scrub-hero-accent-line {
+            width: 78px;
+            height: 2px;
+            margin: 12px 0 14px;
+            background: linear-gradient(90deg, #C94B5C, #C98BC2);
+            transform-origin: left;
+            transform: scaleX(0);
+            animation: scrubLineDraw 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+        }
+
+        .scrub-hero-subcopy {
+            max-width: 480px;
+            margin: 0 0 22px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.75;
+            color: #C9B8D0;
+            opacity: 0;
+            animation: scrubFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
+        }
+
+        .scrub-hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: scrubFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.05s forwards;
+        }
+
+        .scrub-hero-btn-primary {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            background: linear-gradient(100deg, #9B3F8F, #C94B5C);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+            color: #FFFFFF;
+            font-family: "Montserrat", sans-serif;
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            text-decoration: none;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+            overflow: hidden;
+        }
+
+        .scrub-hero-btn-primary::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(100deg, #C94B5C, #E77A88);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+        }
+
+        .scrub-hero-btn-primary span,
+        .scrub-hero-btn-primary i {
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .scrub-hero-btn-primary:hover {
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 18px 40px rgba(201, 75, 92, 0.4);
+        }
+
+        .scrub-hero-btn-primary:hover::before {
+            opacity: 1;
+        }
+
+        .scrub-hero-btn-primary:hover i {
+            transform: translate(3px, 3px);
+        }
+
+        .scrub-hero-btn-glass {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 4px;
+            color: #FFFFFF;
+            font-family: "Montserrat", sans-serif;
+            font-size: 10.5px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .scrub-hero-btn-glass:hover {
+            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(201, 75, 92, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* ---------- HERO IMAGE ARRANGEMENT (UNIQUE) ---------- */
+        .scrub-hero-visual {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 460px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .scrub-visual-stack {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 14px;
+            width: 100%;
+            max-width: 520px;
+            height: 100%;
+        }
+
+        .scrub-visual-card {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateY(30px) scale(0.96);
+            animation: scrubCardReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+        }
+
+        .scrub-visual-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 28px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(231, 122, 136, 0.35);
+        }
+
+        .scrub-visual-card img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .scrub-visual-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .scrub-card--main {
+            width: 62%;
+            height: 380px;
+            z-index: 3;
+            animation-delay: 0.3s;
+        }
+
+        .scrub-card--top {
+            width: 36%;
+            height: 200px;
+            align-self: flex-start;
+            z-index: 2;
+            animation-delay: 0.5s;
+        }
+
+        .scrub-card--bottom {
+            width: 36%;
+            height: 160px;
+            align-self: flex-end;
+            z-index: 4;
+            animation-delay: 0.65s;
+        }
+
+        .scrub-visual-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px;
+            background: rgba(22, 11, 32, 0.88);
+            border: 1px solid rgba(216, 185, 226, 0.28);
+            border-radius: 40px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            animation: scrubBadgePop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1s forwards;
+        }
+
+        .scrub-visual-badge i {
+            color: #E77A88;
+            font-size: 16px;
+        }
+
+        .scrub-visual-badge span {
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        /* ---------- KEYFRAMES ---------- */
+        @keyframes scrubFadeDown {
+            from { opacity: 0; transform: translateY(-16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scrubFadeUp {
+            from { opacity: 0; transform: translateY(22px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scrubTextReveal {
+            to { transform: translateY(0); }
+        }
+
+        @keyframes scrubLineDraw {
+            to { transform: scaleX(1); }
+        }
+
+        @keyframes scrubCardReveal {
+            from { opacity: 0; transform: translateY(30px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes scrubBadgePop {
+            from { opacity: 0; transform: scale(0.4); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* =========================================================
+           SCRUB SPECIFICATIONS — REDESIGNED EDITORIAL CARDS
+           ========================================================= */
+        .scrub-specs-section {
+            position: relative;
+            width: 100%;
+            padding: 95px 0 90px;
+            overflow: hidden;
+            background: #FFFFFF;
+            border-top: 1px solid rgba(53, 18, 79, 0.08);
+            border-bottom: 1px solid rgba(53, 18, 79, 0.06);
+        }
+
+        .scrub-specs-section::before {
+            content: "";
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201, 75, 92, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .scrub-specs-section::after {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(155, 63, 143, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .scrub-specs-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ---------- HEADING ---------- */
+        .scrub-specs-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .scrub-specs-eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            color: var(--sowkar-red);
+        }
+
+        .scrub-specs-heading h2 {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(34px, 4vw, 54px);
+            font-weight: 300;
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+            text-transform: uppercase;
+            color: var(--sowkar-navy);
+        }
+
+        .scrub-specs-heading h2 span {
+            display: block;
+            font-weight: 800;
+            color: var(--sowkar-red);
+        }
+
+        .scrub-specs-heading p {
+            max-width: 620px;
+            margin: 20px auto 0;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--sowkar-text);
+        }
+
+        /* ---------- GRID ---------- */
+        .scrub-spec-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px 28px;
+        }
+
+        /* ---------- CARD ---------- */
+        .scrub-spec-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background: #FFFFFF;
+            border: 1px solid rgba(53, 18, 79, 0.09);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(53, 18, 79, 0.05);
+            transition:
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.5s ease,
+                border-color 0.4s ease;
+        }
+
+        .scrub-spec-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(201, 75, 92, 0.30);
+            box-shadow: 0 24px 55px rgba(53, 18, 79, 0.13);
+        }
+
+        /* ---------- MEDIA ---------- */
+        .scrub-spec-card__media {
+            position: relative;
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            background: #f4ebf3;
+        }
+
+        .scrub-spec-card__media::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 55%, rgba(36, 16, 47, 0.35) 100%);
+            pointer-events: none;
+        }
+
+        .scrub-spec-card__media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .scrub-spec-card:hover .scrub-spec-card__media img {
+            transform: scale(1.06);
+        }
+
+        /* Index number badge */
+        .scrub-spec-card__index {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #FFFFFF;
+            background: rgba(22, 11, 32, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: background 0.4s ease, transform 0.4s ease;
+        }
+
+        .scrub-spec-card:hover .scrub-spec-card__index {
+            background: var(--sowkar-red);
+            transform: rotate(-8deg) scale(1.05);
+        }
+
+        /* ---------- BODY ---------- */
+        .scrub-spec-card__body {
+            position: relative;
+            flex: 1;
+            padding: 26px 30px 30px;
+            display: flex;
+            flex-direction: column;
+            background: #FFFFFF;
+        }
+
+        /* Small accent line above tag */
+        .scrub-spec-card__body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 30px;
+            width: 42px;
+            height: 3px;
+            background: var(--sowkar-red);
+            border-radius: 3px;
+            transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .scrub-spec-card:hover .scrub-spec-card__body::before {
+            width: 78px;
+        }
+
+        /* ---------- TAG ---------- */
+        .scrub-spec-card__tag {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2.2px;
+            text-transform: uppercase;
+            color: var(--sowkar-red);
+        }
+
+        /* ---------- TITLE ---------- */
+        .scrub-spec-card__title {
+            margin: 0 0 12px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -0.3px;
+            color: var(--sowkar-navy);
+        }
+
+        /* ---------- DESCRIPTION ---------- */
+        .scrub-spec-card__desc {
+            margin: 0 0 20px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            line-height: 1.75;
+            color: var(--sowkar-text);
+        }
+
+        /* ---------- SPEC LIST ---------- */
+        .scrub-spec-card__list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 22px;
+            padding-top: 20px;
+            border-top: 1px dashed rgba(53, 18, 79, 0.12);
+        }
+
+        .scrub-spec-card__list li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.5;
+            color: var(--sowkar-navy);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .scrub-spec-card__list li:hover {
+            color: var(--sowkar-red);
+            transform: translateX(3px);
+        }
+
+        /* Custom bullet — small diamond accent */
+        .scrub-spec-card__bullet {
+            flex-shrink: 0;
+            width: 7px;
+            height: 7px;
+            background: var(--sowkar-red);
+            transform: rotate(45deg);
+            transition: background 0.3s ease, transform 0.4s ease;
+        }
+
+        .scrub-spec-card__list li:hover .scrub-spec-card__bullet {
+            background: var(--sowkar-navy);
+            transform: rotate(45deg) scale(1.2);
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 1199.98px) {
+            .scrub-hero-heading { font-size: 44px; }
+            .scrub-card--main { height: 320px; }
+            .scrub-card--top { height: 170px; }
+            .scrub-card--bottom { height: 135px; }
+
+            .scrub-spec-card__media { height: 240px; }
+            .scrub-spec-card__body { padding: 24px 26px 26px; }
+            .scrub-spec-card__body::before { left: 26px; }
+        }
+
+        @media (max-width: 991.98px) {
+            .scrub-hero {
+                min-height: auto;
+                padding: 55px 0 65px;
+            }
+            .scrub-hero-left {
+                max-width: 100%;
+                text-align: center;
+                align-items: center;
+                margin-bottom: 40px;
+            }
+            .scrub-hero-accent-line { margin: 12px auto 14px; }
+            .scrub-hero-actions { justify-content: center; }
+            .scrub-hero-visual { min-height: 380px; }
+            .scrub-visual-stack { max-width: 440px; }
+            .scrub-card--main { height: 290px; }
+            .scrub-card--top { height: 150px; }
+            .scrub-card--bottom { height: 120px; }
+
+            .scrub-specs-section { padding: 75px 0 70px; }
+            .scrub-specs-heading { margin-bottom: 45px; }
+            .scrub-spec-grid { grid-template-columns: 1fr; gap: 26px; }
+            .scrub-spec-card__media { height: 280px; }
+        }
+
+        @media (max-width: 575.98px) {
+            .scrub-hero-heading { font-size: 32px; letter-spacing: -1px; }
+            .scrub-hero-actions { flex-direction: column; width: 100%; }
+            .scrub-hero-btn-primary,
+            .scrub-hero-btn-glass { width: 100%; justify-content: center; }
+
+            .scrub-visual-stack { max-width: 340px; gap: 10px; }
+            .scrub-card--main { height: 230px; }
+            .scrub-card--top { height: 120px; }
+            .scrub-card--bottom { height: 95px; }
+            .scrub-visual-badge { bottom: 12px; left: 12px; padding: 6px 12px; }
+            .scrub-visual-badge span { font-size: 8px; }
+
+            .scrub-specs-section { padding: 60px 0 55px; }
+            .scrub-specs-heading h2 { font-size: 26px; }
+            .scrub-specs-heading p { font-size: 12px; }
+            .scrub-spec-card { border-radius: 14px; }
+            .scrub-spec-card__media { height: 220px; }
+            .scrub-spec-card__index { width: 38px; height: 38px; font-size: 11px; top: 12px; left: 12px; }
+            .scrub-spec-card__body { padding: 22px 20px 24px; }
+            .scrub-spec-card__body::before { left: 20px; }
+            .scrub-spec-card__title { font-size: 17px; }
+            .scrub-spec-card__desc { font-size: 12px; }
+            .scrub-spec-card__list { grid-template-columns: 1fr; gap: 8px; }
+            .scrub-spec-card__list li { font-size: 11.5px; }
+        }
+
+        /* ---------- CTA SECTION (matches index) ---------- */
+        .sowkar-cta {
+            position: relative;
+            padding: 105px 0 110px;
+            background: #fbf8f5;
+            overflow: hidden;
+        }
+
+        .sowkar-cta::before {
+            content: "";
+            position: absolute;
+            width: 520px;
+            height: 520px;
+            left: -260px;
+            top: -260px;
+            border-radius: 50%;
+            background: rgba(155, 63, 143, 0.035);
+            pointer-events: none;
+        }
+
+        .sowkar-cta::after {
+            content: "";
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            right: -220px;
+            bottom: -250px;
+            border-radius: 50%;
+            background: rgba(201, 75, 92, 0.025);
+            pointer-events: none;
+        }
+
+        .sowkar-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .sowkar-cta-label {
+            display: inline-block;
+            margin-bottom: 17px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 6px;
+            line-height: 1.4;
+            color: #35124f;
+        }
+
+        .sowkar-cta-line {
+            width: 108px;
+            height: 4px;
+            margin: 0 auto 36px;
+            background: #c94b5c;
+        }
+
+        .sowkar-cta-heading {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(48px, 5.4vw, 82px);
+            font-weight: 500;
+            line-height: 1.05;
+            letter-spacing: -2.5px;
+            color: #35124f;
+        }
+
+        .sowkar-cta-heading span {
+            color: #c94b5c;
+        }
+
+        .sowkar-cta-text {
+            max-width: 850px;
+            margin: 30px auto 0;
+            font-family: "Montserrat", sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 1.8;
+            color: #50506c;
+        }
+
+        .sowkar-cta-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 22px;
+            margin-top: 48px;
+        }
+
+        .sowkar-cta-btn {
+            min-width: 285px;
+            height: 64px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 32px;
+            border-radius: 50px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sowkar-cta-btn-primary {
+            gap: 24px;
+            color: #ffffff;
+            background: #c94b5c;
+            border: 2px solid #c94b5c;
+        }
+
+        .sowkar-cta-btn-primary i {
+            font-size: 24px;
+            line-height: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .sowkar-cta-btn-primary:hover {
+            color: #ffffff;
+            background: #8f2e42;
+            border-color: #8f2e42;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(143, 46, 66, 0.18);
+        }
+
+        .sowkar-cta-btn-primary:hover i {
+            transform: translateX(5px);
+        }
+
+        .sowkar-cta-btn-outline {
+            color: #35124f;
+            background: transparent;
+            border: 2px solid #35124f;
+        }
+
+        .sowkar-cta-btn-outline:hover {
+            color: #ffffff;
+            background: #35124f;
+            border-color: #35124f;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(53, 18, 79, 0.15);
+        }
+
+        @media (max-width: 991.98px) {
+            .sowkar-cta { padding: 85px 0 90px; }
+            .sowkar-cta-heading { font-size: clamp(44px, 6vw, 64px); }
+            .sowkar-cta-text { font-size: 16px; max-width: 720px; }
+            .sowkar-cta-buttons { margin-top: 40px; }
+        }
+
+        @media (max-width: 767.98px) {
+            .sowkar-cta { padding: 70px 20px 75px; }
+            .sowkar-cta-label { font-size: 11px; letter-spacing: 4px; }
+            .sowkar-cta-line { width: 75px; height: 3px; margin-bottom: 28px; }
+            .sowkar-cta-heading { font-size: clamp(40px, 10vw, 52px); line-height: 1.08; letter-spacing: -1.5px; }
+            .sowkar-cta-text { margin-top: 24px; font-size: 14px; line-height: 1.75; }
+            .sowkar-cta-buttons { flex-direction: column; gap: 14px; margin-top: 34px; }
+            .sowkar-cta-btn { width: 100%; max-width: 330px; min-width: 0; height: 58px; font-size: 12px; letter-spacing: 1.5px; }
+        }
+
+        @media (max-width: 420px) {
+            .sowkar-cta { padding: 60px 18px 65px; }
+            .sowkar-cta-heading { font-size: 38px; }
+            .sowkar-cta-text { font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- =====================================================
+     SOWKAR HEADER
+     ====================================================== -->
+<header id="sowkarMainHeader" class="sowkar-main-header">
+    <nav class="navbar navbar-expand-lg sowkar-navbar">
+        <div class="container-fluid sowkar-navbar-container">
+            <a class="navbar-brand sowkar-brand" href="/">
+                <figure>
+                    <img src="images/sowkar-textiles-logo.png" alt="Sowkar Textiles & Uniforms" class="sowkar-brand-logo" loading="lazy">
+                    <figcaption class="cr-only">Sowkar Textiles and Uniforms Official Brand Logo</figcaption>
+                </figure>
+            </a>
+            <button class="navbar-toggler sowkar-menu-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sowkarNavigation" aria-controls="sowkarNavigation" aria-label="Open navigation">
+                <span class="sowkar-toggler-icon">
+                    <span></span><span></span><span></span><span></span>
+                </span>
+            </button>
+            <div class="offcanvas-lg offcanvas-end sowkar-navigation-offcanvas" tabindex="-1" id="sowkarNavigation" aria-labelledby="sowkarNavigationLabel">
+                <div class="offcanvas-header sowkar-offcanvas-header">
+                    <div id="sowkarNavigationLabel" class="sowkar-mobile-brand">
+                        <figure>
+                            <img src="images/sowkar-textiles-logo.png" alt="Sowkar Textiles & Uniforms" loading="lazy">
+                            <figcaption class="cr-only">Sowkar Textiles and Uniforms Mobile Navigation Logo</figcaption>
+                        </figure>
+                    </div>
+                    <button type="button" class="sowkar-offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close navigation"></button>
+                </div>
+                <div class="offcanvas-body sowkar-navigation-body">
+                    <ul class="navbar-nav sowkar-main-menu ms-auto">
+                        <li class="nav-item sowkar-menu-item"><a class="nav-link sowkar-menu-link" href="index.html">Home</a></li>
+                        <li class="nav-item sowkar-menu-item"><a class="nav-link sowkar-menu-link" href="sowkar-textiles-about-us.html">About Us</a></li>
+                        <li class="nav-item dropdown sowkar-menu-item sowkar-products-menu">
+                            <a class="nav-link dropdown-toggle sowkar-menu-link sowkar-products-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Products</span>
+                                <span class="sowkar-products-arrow"><i class="bi bi-chevron-down"></i></span>
+                            </a>
+                            <div class="dropdown-menu sowkar-products-mega-menu">
+                                <div class="sowkar-mega-inner">
+                                    <div class="sowkar-healthcare-feature">
+                                        <div class="sowkar-feature-top">
+                                            <div class="sowkar-feature-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+                                            <div>
+                                                <span class="sowkar-feature-label">FEATURED CATEGORY</span>
+                                                <h3>Health Care</h3>
+                                            </div>
+                                        </div>
+                                        <p>Professional uniforms and linen solutions designed for hospitals, healthcare teams and medical environments.</p>
+                                        <a href="sowkar-textiles-products-scrub-suits.html" class="sowkar-healthcare-view">Explore Health Care <span><i class="bi bi-arrow-up-right"></i></span></a>
+                                    </div>
+                                    <div class="sowkar-healthcare-list">
+                                        <div class="sowkar-mega-heading"><span>Health Care Collection</span><i class="bi bi-heart-pulse"></i></div>
+                                        <div class="sowkar-healthcare-grid">
+                                            <a href="sowkar-textiles-products-scrub-suits.html"><span><i class="bi bi-person-badge"></i>Scrub Suits</span><i class="bi bi-arrow-up-right"></i></a>
+                                            <a href="sowkar-textiles-products-doctor-coats.html"><span><i class="bi bi-person"></i>Doctor Coats</span><i class="bi bi-arrow-up-right"></i></a>
+                                            <a href="sowkar-textiles-products-Nurse-uniforms.html"><span><i class="bi bi-heart"></i>Nurse Uniforms</span><i class="bi bi-arrow-up-right"></i></a>
+                                            <a href="sowkar-textiles-products-hospital-staff-uniforms.html"><span><i class="bi bi-hospital"></i>Hospital Staff Uniforms</span><i class="bi bi-arrow-up-right"></i></a>
+                                            <a href="sowkar-textiles-products-lab-coats.html"><span><i class="bi bi-eyedropper"></i>Lab Coats</span><i class="bi bi-arrow-up-right"></i></a>
+                                            <a href="sowkar-textiles-products-patient-gown.html"><span><i class="bi bi-person-standing"></i>Patient Gown</span><i class="bi bi-arrow-up-right"></i></a>
+                                            <a href="sowkar-textiles-products-ot-gown.html"><span><i class="bi bi-shield-check"></i>OT Gown</span><i class="bi bi-arrow-up-right"></i></a>
+                                            <a href="sowkar-textiles-products-bedsheets-mackintosh.html"><span><i class="bi bi-layers"></i>Bedsheets / Mackintosh Sheet</span><i class="bi bi-arrow-up-right"></i></a>
+                                            <a href="sowkar-textiles-products-hospital-accessories.html"><span><i class="bi bi-plus-square"></i>Hospital Accessories</span><i class="bi bi-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="sowkar-other-solutions">
+                                        <div class="sowkar-mega-heading"><span>Other Solutions</span></div>
+                                        <a href="sowkar-textiles-products-corporate-uniforms.html" class="sowkar-other-product"><span class="sowkar-other-number">01</span><span class="sowkar-other-content"><strong>Corporate Uniforms</strong><small>Professional workplace wear</small></span><i class="bi bi-arrow-up-right"></i></a>
+                                        <a href="sowkar-textiles-products-education-uniforms.html" class="sowkar-other-product"><span class="sowkar-other-number">02</span><span class="sowkar-other-content"><strong>Education Uniforms</strong><small>School &amp; college uniforms</small></span><i class="bi bi-arrow-up-right"></i></a>
+                                        <a href="sowkar-textiles-products-industry-uniforms.html" class="sowkar-other-product"><span class="sowkar-other-number">03</span><span class="sowkar-other-content"><strong>Industry</strong><small>Industrial workwear</small></span><i class="bi bi-arrow-up-right"></i></a>
+                                        <a href="sowkar-textiles-products-hospitality-uniforms.html" class="sowkar-other-product"><span class="sowkar-other-number">04</span><span class="sowkar-other-content"><strong>Hospitality</strong><small>Hotel &amp; service uniforms</small></span><i class="bi bi-arrow-up-right"></i></a>
+                                        <a href="sowkar-textiles-products-t-shirts.html" class="sowkar-other-product"><span class="sowkar-other-number">05</span><span class="sowkar-other-content"><strong>T-Shirts</strong><small>Custom apparel &amp; branding</small></span><i class="bi bi-arrow-up-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item sowkar-menu-item"><a class="nav-link sowkar-menu-link" href="sowkar-textiles-infrastructure.html">Infrastructure</a></li>
+                        <li class="nav-item sowkar-menu-item"><a class="nav-link sowkar-menu-link" href="sowkar-textiles-clients.html">Clients</a></li>
+                        <li class="nav-item sowkar-menu-item"><a class="nav-link sowkar-menu-link" href="sowkar-textiles-gallery.html">Gallery</a></li>
+                        <li class="nav-item sowkar-menu-item"><a class="nav-link sowkar-menu-link" href="sowkar-textiles-contacts.html">Contact Us</a></li>
+                        <li class="nav-item sowkar-enquiry-item">
+                            <a href="sowkar-textiles-contacts.html#contactFormSection" class="sowkar-enquiry-button"><span>Enquiry Now</span><i class="bi bi-arrow-up-right"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<article>
+
+    <!-- =========================================================
+         SECTION 1: SCRUB SUITS HERO
+         ========================================================= -->
+    <section class="scrub-hero">
+        <div class="container">
+            <div class="row align-items-center g-4 g-lg-5">
+
+                <!-- LEFT: EDITORIAL CONTENT -->
+                <div class="col-lg-6">
+                    <div class="scrub-hero-left">
+
+                        <!-- BREADCRUMB -->
+                        <nav class="scrub-hero-breadcrumb" aria-label="breadcrumb">
+                            <ol class="scrub-crumb-list">
+                                <li class="scrub-crumb-item"><a href="/"><i class="bi bi-house-door-fill me-1"></i> Home</a></li>
+                                <li class="scrub-crumb-sep">/</li>
+                                <li class="scrub-crumb-item"><a href="#">Products</a></li>
+                                <li class="scrub-crumb-sep">/</li>
+                                <li class="scrub-crumb-item active" aria-current="page">Scrub Suits</li>
+                            </ol>
+                        </nav>
+
+                        <!-- LABEL -->
+                        <div class="scrub-hero-label">
+                            <span class="scrub-label-pill"></span>
+                            <span class="scrub-label-text">HEALTH CARE SOLUTIONS</span>
+                            <span class="scrub-label-line"></span>
+                        </div>
+
+                        <!-- HEADING -->
+                        <h1 class="scrub-hero-heading">
+                            <span class="scrub-heading-line">
+                                <span>SCRUB <span class="scrub-text-gradient">SUITS</span></span>
+                            </span>
+                            <span class="scrub-heading-line">
+                                <span>Made for <span class="scrub-text-highlight">Care.</span></span>
+                            </span>
+                        </h1>
+
+                        <!-- TAGLINE -->
+                        <div class="scrub-hero-tagline">
+                            Engineered for Comfort. <span>Tailored for Performance.</span>
+                        </div>
+
+                        <!-- ACCENT LINE -->
+                        <div class="scrub-hero-accent-line"></div>
+
+                        <!-- SUB-COPY -->
+                        <p class="scrub-hero-subcopy">
+                            Professional scrub suits designed for healthcare teams — soft, breathable and durable for long working hours.
+                        </p>
+
+                        <!-- ACTIONS -->
+                        <div class="scrub-hero-actions">
+                            <a href="#specs" class="scrub-hero-btn-primary">
+                                <span>View Specifications</span>
+                                <i class="bi bi-arrow-down"></i>
+                            </a>
+                            <a href="/contact-us" class="scrub-hero-btn-glass">
+                                <i class="bi bi-chat-dots-fill"></i>
+                                <span>Request a Quote</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT: UNIQUE IMAGE ARRANGEMENT -->
+                <div class="col-lg-6">
+                    <div class="scrub-hero-visual">
+                        <div class="scrub-visual-stack">
+
+                            <!-- Top small card -->
+                            <div class="scrub-visual-card scrub-card--top">
+                                <figure>
+                                    <img src="images/sowkar-textiles-scrub-suites.jpg" alt="Premium Scrub Suit Detail" title="Premium Scrub Suit Detail" loading="lazy">
+                                    <figcaption class="cr-only">
+                                        Premium scrub suit detail and stitch quality
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <!-- Main large card -->
+                            <div class="scrub-visual-card scrub-card--main">
+                                <figure>
+                                    <img src="images/sowkar-textiles-health-care-uniform1.jpg" alt="Scrub Suit — Front View" title="Scrub Suit — Front View" loading="lazy">
+                                    <figcaption class="cr-only">
+                                        Hospital healthcare scrub suit front view
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <!-- Bottom small card -->
+                            <div class="scrub-visual-card scrub-card--bottom">
+                                <figure>
+                                    <img src="images/sowkar-textiles-health-care-uniform2.jpg" alt="Scrub Suit — Fabric & Fit" title="Scrub Suit — Fabric & Fit" loading="lazy">
+                                    <figcaption class="cr-only">
+                                        Healthcare scrub suit fabric and fit
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                        </div>
+
+                        <!-- Floating badge -->
+                        <div class="scrub-visual-badge">
+                            <i class="bi bi-patch-check-fill"></i>
+                            <span>Premium Health Care Wear</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 2: PRODUCT SPECIFICATIONS — REDESIGNED
+         ========================================================= -->
+    <section class="scrub-specs-section" id="specs">
+        <div class="container">
+
+            <!-- HEADING -->
+            <div class="scrub-specs-heading">
+                <span class="scrub-specs-eyebrow">PRODUCT SPECIFICATIONS</span>
+                <h2>
+                    Precision in Every <span>Detail.</span>
+                </h2>
+                <p>
+                    Each scrub suit is crafted with premium fabrics, precise stitching and a focus on comfort, durability and professional appearance.
+                </p>
+            </div>
+
+            <!-- SPEC CARDS -->
+            <div class="scrub-spec-grid">
+
+                <!-- CARD 01 -->
+                <article class="scrub-spec-card">
+                    <div class="scrub-spec-card__media">
+                        <figure>
+                            <img src="images/sowkar-textiles-scrub-suites.jpg" alt="Classic V-Neck Scrub Suit" title="Classic V-Neck Scrub Suit" loading="lazy">
+                            <figcaption class="cr-only">Classic V-Neck Scrub Suit presentation</figcaption>
+                        </figure>
+                        <span class="scrub-spec-card__index">01</span>
+                    </div>
+                    <div class="scrub-spec-card__body">
+                        <span class="scrub-spec-card__tag">Everyday Essential</span>
+                        <h3 class="scrub-spec-card__title">Classic V-Neck Scrub Suit</h3>
+                        <p class="scrub-spec-card__desc">
+                            A timeless V-neck design with a relaxed fit, offering freedom of movement and all-day comfort.
+                        </p>
+                        <ul class="scrub-spec-card__list">
+                            <li><span class="scrub-spec-card__bullet"></span> 65% Polyester / 35% Cotton</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Breathable &amp; wrinkle-resistant</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Reinforced stitching</li>
+                            <li><span class="scrub-spec-card__bullet"></span> 3-pocket configuration</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Unisex fit</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Colour-fast dyes</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- CARD 02 -->
+                <article class="scrub-spec-card">
+                    <div class="scrub-spec-card__media">
+                        <figure>
+                            <img src="images/sowkar-textiles-health-care-uniform1.jpg" alt="Contemporary Crossover Scrub" title="Contemporary Crossover Scrub" loading="lazy">
+                            <figcaption class="cr-only">Contemporary Crossover Scrub tailored fit</figcaption>
+                        </figure>
+                        <span class="scrub-spec-card__index">02</span>
+                    </div>
+                    <div class="scrub-spec-card__body">
+                        <span class="scrub-spec-card__tag">Modern Silhouette</span>
+                        <h3 class="scrub-spec-card__title">Contemporary Crossover Scrub</h3>
+                        <p class="scrub-spec-card__desc">
+                            A contemporary crossover neckline with a tailored fit, combining style and functionality.
+                        </p>
+                        <ul class="scrub-spec-card__list">
+                            <li><span class="scrub-spec-card__bullet"></span> 4-way stretch fabric</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Moisture-wicking finish</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Anti-microbial treatment</li>
+                            <li><span class="scrub-spec-card__bullet"></span> 4-pocket layout</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Tailored fit</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Easy-care fabric</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- CARD 03 -->
+                <article class="scrub-spec-card">
+                    <div class="scrub-spec-card__media">
+                        <figure>
+                            <img src="images/sowkar-textiles-health-care-uniform2.jpg" alt="Premium Performance Scrub" title="Premium Performance Scrub" loading="lazy">
+                            <figcaption class="cr-only">Premium Performance Scrub clinical fabric</figcaption>
+                        </figure>
+                        <span class="scrub-spec-card__index">03</span>
+                    </div>
+                    <div class="scrub-spec-card__body">
+                        <span class="scrub-spec-card__tag">High-Performance Wear</span>
+                        <h3 class="scrub-spec-card__title">Premium Performance Scrub</h3>
+                        <p class="scrub-spec-card__desc">
+                            Engineered for demanding clinical environments with advanced fabric technology.
+                        </p>
+                        <ul class="scrub-spec-card__list">
+                            <li><span class="scrub-spec-card__bullet"></span> Poly-cotton blend with spandex</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Fluid-repellent finish</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Anti-static properties</li>
+                            <li><span class="scrub-spec-card__bullet"></span> 5-pocket design</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Reinforced stress points</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Industrial wash safe</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- CARD 04 -->
+                <article class="scrub-spec-card">
+                    <div class="scrub-spec-card__media">
+                        <figure>
+                            <img src="images/sowkar-textiles-scrub-suites.jpg" alt="OT-Ready Scrub Suit" title="OT-Ready Scrub Suit" loading="lazy">
+                            <figcaption class="cr-only">OT-Ready Scrub Suit for operation theatre hygiene</figcaption>
+                        </figure>
+                        <span class="scrub-spec-card__index">04</span>
+                    </div>
+                    <div class="scrub-spec-card__body">
+                        <span class="scrub-spec-card__tag">Operation Theatre Essential</span>
+                        <h3 class="scrub-spec-card__title">OT-Ready Scrub Suit</h3>
+                        <p class="scrub-spec-card__desc">
+                            Specifically designed for operation theatre environments, offering maximum hygiene and ease of movement.
+                        </p>
+                        <ul class="scrub-spec-card__list">
+                            <li><span class="scrub-spec-card__bullet"></span> 100% cotton or poly-cotton</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Autoclavable up to 140°C</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Low-lint fabric</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Secure tie-back / drawstring</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Comfortable unisex fit</li>
+                            <li><span class="scrub-spec-card__bullet"></span> Available in multiple colours</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 3: CTA — EXACT MATCH FROM INDEX PAGE
+         ========================================================= -->
+    <section class="sowkar-cta">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-11">
+                    <div class="sowkar-cta-content text-center">
+                        <div class="sowkar-cta-label">LET’S WORK TOGETHER</div>
+                        <div class="sowkar-cta-line"></div>
+                        <h2 class="sowkar-cta-heading">
+                            Need Customized
+                            <span>Uniforms?</span>
+                        </h2>
+                        <p class="sowkar-cta-text">
+                            Get in touch with our team for the right uniform solutions
+                            tailored to your institution, business or industry.
+                        </p>
+                        <div class="sowkar-cta-buttons">
+                            <a href="#contact" class="sowkar-cta-btn sowkar-cta-btn-primary">
+                                <span>GET A QUOTE</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                            <a href="#contact" class="sowkar-cta-btn sowkar-cta-btn-outline">
+                                CONTACT US
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- =========================================================
+     SOWKAR FOOTER
+     ========================================================= -->
+<footer class="sowkar-footer">
+    <div class="container">
+        <div class="row sowkar-footer-main">
+            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                <div class="sowkar-footer-brand">
+                    <a href="index.html" class="sowkar-footer-logo">
+                        <figure>
+                            <img src="images/sowkar-textiles-logo1.png" class="img-fluid" alt="Sowkar Textiles & Uniforms Logo" title="Sowkar Textiles & Uniforms Logo" loading="lazy">
+                            <figcaption class="cr-only">
+                                Sowkar Textiles & Uniforms Logo
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="sowkar-footer-line"></div>
+                    <div class="sowkar-footer-tagline">QUALITY WEAR<br>FOR A BRIGHTER TOMORROW</div>
+                    <p>Your trusted partner for premium textiles, uniforms and customized apparel solutions.</p>
+                </div>
+                <div class="sowkar-footer-social">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/sowkar_uniforms/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <!-- <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a> -->
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                <div class="sowkar-footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+                        <li><a href="sowkar-textiles-about-us.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+                        <li><a href="#products"><i class="bi bi-chevron-right"></i> Products</a></li>
+                        <li><a href="sowkar-textiles-infrastructure.html"><i class="bi bi-chevron-right"></i> Infrastructure</a></li>
+                        <li><a href="sowkar-textiles-clients.html"><i class="bi bi-chevron-right"></i> Our Clients</a></li>
+                        <li><a href="sowkar-textiles-testimonials.html"><i class="bi bi-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="sowkar-textiles-contacts.html"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                <div class="sowkar-footer-column">
+                    <h3>Our Products</h3>
+                    <ul>
+                        <li><a href="sowkar-textiles-products-scrub-suits.html"><i class="bi bi-chevron-right"></i> Healthcare</a></li>
+                        <li><a href="sowkar-textiles-products-corporate-uniforms.html"><i class="bi bi-chevron-right"></i> Corporate Uniforms</a></li>
+                        <li><a href="sowkar-textiles-products-education-uniforms.html"><i class="bi bi-chevron-right"></i> Education Uniforms</a></li>
+                        <li><a href="sowkar-textiles-products-industry-uniforms.html"><i class="bi bi-chevron-right"></i> Industry</a></li>
+                        <li><a href="sowkar-textiles-products-hospitality-uniforms.html"><i class="bi bi-chevron-right"></i> Hospitality</a></li>
+                        <li><a href="sowkar-textiles-products-t-shirts.html"><i class="bi bi-chevron-right"></i> T-Shirts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="sowkar-footer-column sowkar-footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="sowkar-contact-item">
+                        <div class="sowkar-contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <div>
+                            <span>Bhola Building, Behind Kankanady Market</span>
+                            <span>Kankanady, Mangalore – 575002</span>
+                        </div>
+                    </div>
+                    <div class="sowkar-contact-item">
+                        <div class="sowkar-contact-icon"><i class="bi bi-telephone-fill"></i></div>
+                        <div>
+                            <a href="tel:+919611544600">+91 96115 44600</a>
+                            <a href="tel:+919739266396">+91 97392 66396</a>
+                            <a href="tel:+918277194657">+91 82771 94657</a>
+                        </div>
+                    </div>
+                    <div class="sowkar-contact-item">
+                        <div class="sowkar-contact-icon"><i class="bi bi-envelope-fill"></i></div>
+                        <div><a href="mailto:sowkartex@rediffmail.com">sowkartex@rediffmail.com</a></div>
+                    </div>
+                    <div class="sowkar-footer-contact-divider"></div>
+                    <div class="sowkar-working-hours">
+                        <h4>Working Hours</h4>
+                        <div class="sowkar-hours-row">
+                            <i class="bi bi-clock-fill"></i>
+                            <div>
+                                <span>Monday - Saturday</span>
+                                <strong>9:00 AM - 5:30 PM</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sowkar-footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p>© 2026 SOWKAR TEXTILES & UNIFORMS. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="sowkar-powered-by">
+                        Powered by <a href="https://www.bluelinecomputers.com/" target="_blank" rel="noopener noreferrer">Blueline Computers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- =========================================
+     FIXED WHATSAPP BUTTON
+     ========================================= -->
+<a href="https://wa.me/919611544600?text=Hello%20SOWKAR%20Textiles%20%26%20Uniforms%2C%20I%20would%20like%20to%20know%20more%20about%20your%20uniforms."
+   class="sowkar-whatsapp"
+   target="_blank"
+   rel="noopener noreferrer"
+   data-bs-toggle="tooltip"
+   data-bs-placement="left"
+   title="Chat with us on WhatsApp"
+   aria-label="Chat with SOWKAR on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+
+<!-- HEADER SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const sowkarHeader = document.getElementById("sowkarMainHeader");
+    const sowkarProductsMenu = document.querySelector(".sowkar-products-menu");
+    const sowkarProductsToggle = document.querySelector(".sowkar-products-toggle");
+    const sowkarProductsDropdown = document.querySelector(".sowkar-products-mega-menu");
+    const sowkarNavigation = document.getElementById("sowkarNavigation");
+    const sowkarCloseButton = document.querySelector(".sowkar-offcanvas-close");
+    let sowkarHoverTimeout = null;
+    let sowkarScrollTick = false;
+
+    function sowkarIsDesktop() { return window.innerWidth >= 992; }
+
+    function sowkarUpdateHeader() {
+        if (window.scrollY > 50) {
+            if (!sowkarHeader.classList.contains("sowkar-header-scrolled")) {
+                sowkarHeader.classList.add("sowkar-header-scrolled");
+            }
+        } else {
+            sowkarHeader.classList.remove("sowkar-header-scrolled");
+        }
+        sowkarScrollTick = false;
+    }
+
+    window.addEventListener("scroll", function () {
+        if (!sowkarScrollTick) {
+            window.requestAnimationFrame(sowkarUpdateHeader);
+            sowkarScrollTick = true;
+        }
+    }, { passive: true });
+
+    sowkarUpdateHeader();
+
+    function sowkarOpenProducts() {
+        if (!sowkarIsDesktop()) return;
+        clearTimeout(sowkarHoverTimeout);
+        sowkarProductsMenu.classList.add("show");
+        sowkarProductsDropdown.classList.add("show");
+        sowkarProductsToggle.setAttribute("aria-expanded", "true");
+    }
+
+    function sowkarCloseProducts(immediate = false) {
+        if (!sowkarIsDesktop()) return;
+        clearTimeout(sowkarHoverTimeout);
+        const sowkarDoClose = function () {
+            sowkarProductsMenu.classList.remove("show");
+            sowkarProductsDropdown.classList.remove("show");
+            sowkarProductsToggle.setAttribute("aria-expanded", "false");
+        };
+        if (immediate) { sowkarDoClose(); } else { sowkarHoverTimeout = setTimeout(sowkarDoClose, 180); }
+    }
+
+    sowkarProductsMenu.addEventListener("mouseenter", function () { if (sowkarIsDesktop()) sowkarOpenProducts(); });
+    sowkarProductsMenu.addEventListener("mouseleave", function () { if (sowkarIsDesktop()) sowkarCloseProducts(); });
+    sowkarProductsDropdown.addEventListener("mouseenter", function () { if (sowkarIsDesktop()) clearTimeout(sowkarHoverTimeout); });
+    sowkarProductsDropdown.addEventListener("mouseleave", function () { if (sowkarIsDesktop()) sowkarCloseProducts(); });
+
+    sowkarProductsToggle.addEventListener("click", function (event) {
+        if (sowkarIsDesktop()) {
+            event.preventDefault();
+            clearTimeout(sowkarHoverTimeout);
+            const sowkarIsOpen = sowkarProductsMenu.classList.contains("show");
+            if (sowkarIsOpen) { sowkarCloseProducts(true); } else { sowkarOpenProducts(); }
+        }
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!sowkarIsDesktop()) return;
+        if (!sowkarProductsMenu.contains(event.target)) { sowkarCloseProducts(true); }
+    });
+
+    if (sowkarCloseButton) {
+        sowkarCloseButton.addEventListener("click", function () {
+            const sowkarOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(sowkarNavigation);
+            sowkarOffcanvas.hide();
+        });
+    }
+
+    sowkarNavigation.querySelectorAll(".sowkar-main-menu a:not(.sowkar-products-toggle)").forEach(function (sowkarLink) {
+        sowkarLink.addEventListener("click", function () {
+            if (!sowkarIsDesktop()) {
+                const sowkarOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(sowkarNavigation);
+                sowkarOffcanvas.hide();
+            }
+        });
+    });
+
+    sowkarNavigation.addEventListener("show.bs.offcanvas", function () {
+        sowkarProductsMenu.classList.remove("show");
+        sowkarProductsDropdown.classList.remove("show");
+        sowkarProductsToggle.setAttribute("aria-expanded", "false");
+    });
+
+    window.addEventListener("resize", function () {
+        if (!sowkarIsDesktop()) {
+            sowkarProductsMenu.classList.remove("show");
+            sowkarProductsDropdown.classList.remove("show");
+            sowkarProductsToggle.setAttribute("aria-expanded", "false");
+        }
+    });
+});
+</script>
+
+<!-- WHATSAPP TOOLTIP -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const whatsappButton = document.querySelector('.sowkar-whatsapp[data-bs-toggle="tooltip"]');
+    if (whatsappButton) { new bootstrap.Tooltip(whatsappButton); }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,838 @@
+/* =========================================================
+   SOWKAR SCRUB SUITS PRODUCT PAGE
+   Uses only the existing SOWKAR palette + existing font system.
+========================================================= */
+
+.sowkar-scrub-page {
+    background: var(--sowkar-cream);
+}
+
+
+/* =========================================================
+   01. HERO
+========================================================= */
+
+.sowkar-scrub-hero {
+    position: relative;
+    width: 100%;
+    min-height: 760px;
+    overflow: hidden;
+    isolation: isolate;
+
+    background:
+        radial-gradient(circle at 78% 22%, rgba(155,63,143,.24), transparent 28%),
+        radial-gradient(circle at 91% 58%, rgba(201,75,92,.15), transparent 27%),
+        radial-gradient(circle at 12% 82%, rgba(216,185,226,.10), transparent 30%),
+        linear-gradient(125deg, #0e0714 0%, #1b0c23 48%, #25102d 100%);
+}
+
+.sowkar-scrub-hero-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(to right, rgba(234,220,240,.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(234,220,240,.035) 1px, transparent 1px);
+
+    background-size: 46px 46px;
+    mask-image: radial-gradient(ellipse at 72% 52%, black 28%, transparent 77%);
+    -webkit-mask-image: radial-gradient(ellipse at 72% 52%, black 28%, transparent 77%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sowkar-scrub-hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: 7%;
+    top: -18%;
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(201,75,92,.13) 0%,
+            rgba(155,63,143,.07) 44%,
+            transparent 70%
+        );
+
+    filter: blur(42px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sowkar-scrub-hero-inner {
+    position: relative;
+    z-index: 5;
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+}
+
+.sowkar-scrub-copy {
+    position: relative;
+    z-index: 10;
+    max-width: 610px;
+    padding: 42px 0 56px;
+}
+
+.sowkar-scrub-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 28px;
+
+    color: rgba(255,255,255,.70);
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3.2px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.sowkar-scrub-label-line {
+    width: 45px;
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--sowkar-red),
+            var(--sowkar-purple-light)
+        );
+}
+
+.sowkar-scrub-script {
+    margin-bottom: 9px;
+
+    color: var(--sowkar-purple-light);
+    font-family: "Playfair Display", serif;
+    font-size: 31px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.sowkar-scrub-title {
+    margin: 0;
+
+    color: var(--sowkar-white);
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(54px, 5.3vw, 82px);
+    font-weight: 900;
+    line-height: .91;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+
+.sowkar-scrub-title span {
+    color: var(--sowkar-purple-light);
+}
+
+.sowkar-scrub-tagline {
+    margin-top: 22px;
+
+    color: rgba(255,255,255,.78);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.sowkar-scrub-tagline span {
+    color: var(--sowkar-red-light);
+}
+
+.sowkar-scrub-line {
+    width: 78px;
+    height: 2px;
+    margin-top: 21px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--sowkar-red),
+            var(--sowkar-purple-light)
+        );
+}
+
+.sowkar-scrub-description {
+    max-width: 480px;
+    margin: 18px 0 0;
+
+    color: var(--sowkar-muted);
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.sowkar-scrub-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: 28px;
+
+    color: rgba(255,255,255,.56);
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.1px;
+}
+
+.sowkar-scrub-meta i {
+    color: var(--sowkar-red-light);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   HERO COLLAGE
+========================================================= */
+
+.sowkar-scrub-collage {
+    position: relative;
+    width: min(100%, 590px);
+    height: 590px;
+    margin-left: auto;
+}
+
+.sowkar-scrub-collage-main {
+    position: absolute;
+    right: 0;
+    top: 5%;
+    width: 72%;
+    height: 84%;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 125px 0 0 12px;
+
+    background: var(--sowkar-deep-2);
+
+    box-shadow:
+        -30px 0 70px rgba(22,11,32,.30),
+        0 30px 60px rgba(22,11,32,.34);
+}
+
+.sowkar-scrub-collage-main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background:
+        linear-gradient(90deg, rgba(17,7,22,.34), transparent 27%),
+        linear-gradient(180deg, rgba(10,4,14,.05), transparent 52%, rgba(10,4,14,.28));
+}
+
+.sowkar-scrub-collage-main::after {
+    content: "";
+    position: absolute;
+    top: 14%;
+    left: -1px;
+    width: 1px;
+    height: 72%;
+    z-index: 3;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(234,220,240,.38),
+            rgba(201,75,92,.72),
+            transparent
+        );
+}
+
+.sowkar-scrub-collage-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sowkar-scrub-image-tag {
+    position: absolute;
+    left: 25px;
+    bottom: 23px;
+    z-index: 4;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 9px 12px;
+
+    background: rgba(15,6,20,.66);
+    border: 1px solid rgba(234,220,240,.18);
+
+    color: rgba(255,255,255,.84);
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.sowkar-scrub-image-tag span:first-child {
+    color: var(--sowkar-red-light);
+}
+
+.sowkar-scrub-collage-small {
+    position: absolute;
+    overflow: hidden;
+
+    border: 1px solid rgba(234,220,240,.18);
+    background: var(--sowkar-plum);
+
+    box-shadow: 0 25px 48px rgba(22,11,32,.32);
+}
+
+.sowkar-scrub-collage-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sowkar-scrub-collage-small-one {
+    left: 2%;
+    top: 2%;
+    width: 28%;
+    height: 34%;
+    border-radius: 8px 52px 8px 8px;
+    transform: rotate(-4deg);
+}
+
+.sowkar-scrub-collage-small-two {
+    left: 8%;
+    bottom: 2%;
+    width: 31%;
+    height: 38%;
+    border-radius: 52px 8px 8px 8px;
+    transform: rotate(4deg);
+}
+
+.sowkar-scrub-collage-note {
+    position: absolute;
+    left: 2%;
+    bottom: 19%;
+    z-index: 5;
+
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+
+    color: rgba(255,255,255,.72);
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1.55;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sowkar-scrub-collage-note-number {
+    color: var(--sowkar-purple-light);
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: .8;
+    letter-spacing: -2px;
+}
+
+.sowkar-scrub-collage-corner {
+    position: absolute;
+    right: 3%;
+    top: 1%;
+    width: 94px;
+    height: 94px;
+
+    border-top: 1px solid rgba(234,220,240,.42);
+    border-right: 1px solid rgba(201,75,92,.60);
+
+    pointer-events: none;
+}
+
+.sowkar-scrub-collage-corner::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+
+    border-top: 1px solid rgba(201,75,92,.42);
+    border-right: 1px solid rgba(234,220,240,.25);
+}
+
+.sowkar-scrub-hero-index {
+    position: absolute;
+    left: 5%;
+    bottom: 32px;
+    z-index: 8;
+
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+
+    color: rgba(255,255,255,.52);
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.sowkar-scrub-hero-index strong {
+    color: var(--sowkar-red-light);
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   02. PRODUCT / SPECIFICATION ROW
+========================================================= */
+
+.sowkar-scrub-products {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 104px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--sowkar-cream) 0%,
+            #ffffff 54%,
+            var(--sowkar-soft) 100%
+        );
+}
+
+.sowkar-scrub-products::before {
+    content: "SCRUB";
+    position: absolute;
+    right: -2%;
+    top: 8px;
+    z-index: 0;
+
+    color: rgba(118,45,112,.035);
+    font-family: "Montserrat", sans-serif;
+    font-size: 210px;
+    font-weight: 800;
+    line-height: .8;
+    letter-spacing: -10px;
+    pointer-events: none;
+}
+
+.sowkar-scrub-products .container {
+    position: relative;
+    z-index: 2;
+}
+
+.sowkar-scrub-products-head {
+    max-width: 760px;
+    margin: 0 auto 44px;
+    text-align: center;
+}
+
+.sowkar-scrub-products-kicker {
+    display: inline-block;
+    margin-bottom: 14px;
+
+    color: var(--sowkar-red);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.sowkar-scrub-products-title {
+    margin: 0;
+
+    color: var(--sowkar-navy);
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+}
+
+.sowkar-scrub-products-title span {
+    display: block;
+    color: var(--sowkar-red);
+}
+
+.sowkar-scrub-products-rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 23px;
+}
+
+.sowkar-scrub-products-rule span {
+    width: 55px;
+    height: 1px;
+    background: var(--sowkar-red);
+}
+
+.sowkar-scrub-products-rule i {
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--sowkar-purple);
+    transform: rotate(45deg);
+}
+
+.sowkar-scrub-product-row {
+    align-items: stretch;
+}
+
+.sowkar-scrub-product-card {
+    height: 100%;
+    padding: 0;
+    background: rgba(255,255,255,.76);
+    border: 1px solid var(--sowkar-border);
+    overflow: hidden;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.sowkar-scrub-product-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(155,63,143,.24);
+    box-shadow: 0 24px 50px rgba(53,18,79,.10);
+}
+
+.sowkar-scrub-product-card-offset {
+    transform: translateY(24px);
+}
+
+.sowkar-scrub-product-card-offset:hover {
+    transform: translateY(18px);
+}
+
+.sowkar-scrub-product-image {
+    position: relative;
+    height: 295px;
+    overflow: hidden;
+    background: var(--sowkar-deep-2);
+}
+
+.sowkar-scrub-product-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(22,11,32,.02),
+            transparent 58%,
+            rgba(22,11,32,.28)
+        );
+    pointer-events: none;
+}
+
+.sowkar-scrub-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s cubic-bezier(.22,1,.36,1);
+}
+
+.sowkar-scrub-product-card:hover .sowkar-scrub-product-image img {
+    transform: scale(1.025);
+}
+
+.sowkar-scrub-product-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    background: rgba(255,255,255,.88);
+    color: var(--sowkar-navy);
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.sowkar-scrub-product-body {
+    padding: 28px 29px 30px;
+}
+
+.sowkar-scrub-product-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--sowkar-border);
+
+    color: var(--sowkar-muted);
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+}
+
+.sowkar-scrub-product-topline i {
+    color: var(--sowkar-red);
+    font-size: 14px;
+}
+
+.sowkar-scrub-product-body h3 {
+    margin: 22px 0 18px;
+
+    color: var(--sowkar-navy);
+    font-family: "Urbanist", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -.4px;
+}
+
+.sowkar-scrub-product-body ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sowkar-scrub-product-body li {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 15px;
+
+    padding: 12px 0;
+    border-top: 1px solid var(--sowkar-border);
+}
+
+.sowkar-scrub-product-body li:last-child {
+    padding-bottom: 0;
+}
+
+.sowkar-scrub-product-body li span {
+    color: var(--sowkar-red);
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.sowkar-scrub-product-body li strong {
+    color: var(--sowkar-text);
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1199.98px) {
+    .sowkar-scrub-hero,
+    .sowkar-scrub-hero-inner {
+        min-height: 700px;
+    }
+
+    .sowkar-scrub-collage {
+        height: 520px;
+    }
+
+    .sowkar-scrub-products {
+        padding-top: 88px;
+    }
+
+    .sowkar-scrub-products::before {
+        font-size: 160px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sowkar-scrub-hero {
+        min-height: auto;
+    }
+
+    .sowkar-scrub-hero-inner {
+        min-height: auto;
+        padding-top: 92px;
+        padding-bottom: 86px;
+    }
+
+    .sowkar-scrub-copy {
+        max-width: 680px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .sowkar-scrub-label {
+        justify-content: center;
+    }
+
+    .sowkar-scrub-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sowkar-scrub-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sowkar-scrub-meta {
+        justify-content: center;
+    }
+
+    .sowkar-scrub-collage {
+        margin: 0 auto;
+    }
+
+    .sowkar-scrub-hero-index {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .sowkar-scrub-product-card-offset {
+        transform: none;
+    }
+
+    .sowkar-scrub-product-card-offset:hover {
+        transform: translateY(-6px);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .sowkar-scrub-hero-inner {
+        padding: 76px 20px 80px;
+    }
+
+    .sowkar-scrub-title {
+        font-size: clamp(46px, 13vw, 66px);
+        letter-spacing: -2px;
+    }
+
+    .sowkar-scrub-script {
+        font-size: 27px;
+    }
+
+    .sowkar-scrub-tagline {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .sowkar-scrub-collage {
+        height: 450px;
+    }
+
+    .sowkar-scrub-collage-main {
+        width: 70%;
+        height: 78%;
+    }
+
+    .sowkar-scrub-collage-small-one {
+        width: 31%;
+        height: 32%;
+    }
+
+    .sowkar-scrub-collage-small-two {
+        width: 34%;
+        height: 34%;
+    }
+
+    .sowkar-scrub-collage-note {
+        bottom: 18%;
+    }
+
+    .sowkar-scrub-products {
+        padding: 72px 20px 76px;
+    }
+
+    .sowkar-scrub-products-title {
+        font-size: clamp(38px, 10vw, 52px);
+        line-height: 1.08;
+    }
+
+    .sowkar-scrub-products::before {
+        font-size: 100px;
+        right: -6%;
+    }
+
+    .sowkar-scrub-product-image {
+        height: 285px;
+    }
+
+    .sowkar-scrub-product-body {
+        padding: 25px 24px 27px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sowkar-scrub-collage {
+        height: 390px;
+    }
+
+    .sowkar-scrub-collage-main {
+        width: 73%;
+        height: 76%;
+        border-radius: 90px 0 0 10px;
+    }
+
+    .sowkar-scrub-collage-small-one {
+        top: 3%;
+        width: 30%;
+    }
+
+    .sowkar-scrub-collage-small-two {
+        left: 6%;
+        bottom: 4%;
+        width: 35%;
+    }
+
+    .sowkar-scrub-collage-note {
+        left: 0;
+        bottom: 17%;
+        font-size: 8px;
+    }
+
+    .sowkar-scrub-collage-note-number {
+        font-size: 34px;
+    }
+
+    .sowkar-scrub-image-tag {
+        left: 15px;
+        bottom: 15px;
+        font-size: 8px;
+    }
+
+    .sowkar-scrub-product-body li {
+        grid-template-columns: 78px 1fr;
+        gap: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sowkar-scrub-product-card,
+    .sowkar-scrub-product-image img {
+        transition: none;
+    }
+}

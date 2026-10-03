@@ -1,0 +1,2639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>About Us | SOWKAR TEXTILES &amp; UNIFORMS</title>
+
+    <link rel="shortcut icon" href="images/favicon.png">
+    <meta name="theme-color" content="#031d2b">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- MAIN STYLESHEET -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- =========================================================
+         ABOUT PAGE — PAGE SPECIFIC STYLES
+         (move this block into css/style.css if you prefer)
+    ========================================================== -->
+    <style>
+        /* =========================================================
+   ABOUT HERO — "EDITORIAL PORTRAIT"
+   Content-driven, capped at 75vh
+========================================================= */
+
+.saw-hero {
+    position: relative;
+    max-height: 75vh;            /* ≤ 75vh — never taller */
+    padding: 24px 0 0;
+    background: #FBF8F5;
+    overflow: hidden;            /* clip if content would exceed cap */
+}
+
+.saw-hero::before {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: 4%;
+    width: 96px;
+    height: 96px;
+    background-image: radial-gradient(circle, rgba(201,75,92,.35) 1.5px, transparent 1.5px);
+    background-size: 12px 12px;
+    opacity: .55;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.saw-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 4%;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg,
+        transparent 0%,
+        rgba(53,18,79,.10) 20%,
+        rgba(53,18,79,.10) 80%,
+        transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.saw-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.saw-hero-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- TOP BAR ---------- */
+.saw-hero-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 26px;
+    opacity: 0;
+    animation: sawFadeDown .7s cubic-bezier(.16,1,.3,1) .1s forwards;
+}
+
+.saw-crumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #817485;
+}
+
+.saw-crumb a {
+    color: #35124F;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+.saw-crumb a:hover { color: #C94B5C; }
+
+.saw-crumb > span:not(.is-active) {
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: #C94B5C;
+}
+
+.saw-crumb .is-active {
+    color: #C94B5C;
+    font-weight: 700;
+}
+
+.saw-hero-index {
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: #817485;
+}
+
+/* ---------- MAIN GRID ---------- */
+.saw-hero-main {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding-bottom: 26px;
+}
+
+.saw-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ---------- KICKER ---------- */
+.saw-hero-kicker {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.saw-hero-kicker .kicker-line {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: #C94B5C;
+    transform-origin: left center;
+    transform: scaleX(0);
+    animation: sawLineDraw .8s cubic-bezier(.16,1,.3,1) .3s forwards;
+}
+
+.saw-hero-kicker .kicker-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #C94B5C;
+    opacity: 0;
+    animation: sawFadeRight .6s cubic-bezier(.16,1,.3,1) .5s forwards;
+}
+
+/* ---------- TITLE ---------- */
+.saw-hero-title {
+    margin: 0 0 24px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 5vw, 76px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -2.5px;
+    color: #160B20;
+}
+
+.saw-hero-title .line {
+    display: block;
+    overflow: hidden;
+    padding: 0 0 4px;
+}
+
+.saw-hero-title .line > span {
+    display: inline-block;
+    transform: translateY(105%);
+    animation: sawTextReveal 1s cubic-bezier(.22,1,.36,1) forwards;
+}
+
+.saw-hero-title .line:nth-child(1) > span { animation-delay: .50s; }
+.saw-hero-title .line:nth-child(2) > span { animation-delay: .65s; }
+.saw-hero-title .line:nth-child(3) > span { animation-delay: .80s; }
+
+.saw-hero-title em {
+    position: relative;
+    font-style: italic;
+    font-weight: 500;
+    color: #C94B5C;
+    z-index: 1;
+}
+
+.saw-hero-title em::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    height: 6px;
+    background: rgba(201,75,92,.18);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left center;
+    animation: sawLineDraw .7s cubic-bezier(.16,1,.3,1) 1.4s forwards;
+}
+
+/* ---------- DESCRIPTION ---------- */
+.saw-hero-desc {
+    max-width: 560px;
+    margin: 0 0 26px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 1.85;
+    color: #514853;
+    opacity: 0;
+    animation: sawFadeUp .9s cubic-bezier(.16,1,.3,1) 1s forwards;
+}
+
+/* ---------- ACTIONS ---------- */
+.saw-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: sawFadeUp .9s cubic-bezier(.16,1,.3,1) 1.2s forwards;
+}
+
+.saw-hero-cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 24px;
+    overflow: hidden;
+    text-decoration: none;
+    background: #160B20;
+    color: #fff;
+    isolation: isolate;
+    transition: transform .4s cubic-bezier(.16,1,.3,1),
+                box-shadow .4s ease;
+}
+
+.saw-hero-cta .cta-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, #9B3F8F, #C94B5C);
+    transform: translateX(-101%);
+    transition: transform .55s cubic-bezier(.16,1,.3,1);
+    z-index: -1;
+}
+
+.saw-hero-cta .cta-text {
+    position: relative;
+    z-index: 2;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    transition: transform .4s ease;
+}
+
+.saw-hero-cta i {
+    position: relative;
+    z-index: 2;
+    font-size: 15px;
+    transition: transform .4s cubic-bezier(.16,1,.3,1);
+}
+
+.saw-hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 45px rgba(22,11,32,.24);
+}
+.saw-hero-cta:hover .cta-bg     { transform: translateX(0); }
+.saw-hero-cta:hover .cta-text   { transform: translateX(4px); }
+.saw-hero-cta:hover i           { transform: translate(4px, 4px); }
+
+.saw-hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #817485;
+}
+
+.saw-hero-tag .tag-line {
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: rgba(53,18,79,.25);
+}
+
+/* ---------- RIGHT VISUAL ----------
+   Intrinsic aspect ratio → natural height,
+   capped at 480px so the hero stays under 75vh.
+------------------------------------ */
+.saw-hero-visual {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    max-height: 480px;
+    justify-self: end;
+}
+
+.saw-hero-image-wrap {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    clip-path: inset(100% 0 0 0);
+    animation: sawImageReveal 1.4s cubic-bezier(.16,1,.3,1) .4s forwards;
+}
+
+.saw-hero-image {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.saw-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.12);
+    animation: sawImageScale 1.6s cubic-bezier(.16,1,.3,1) .4s forwards;
+    transition: transform 1.2s cubic-bezier(.16,1,.3,1);
+}
+
+.saw-hero-visual:hover .saw-hero-image img {
+    transform: scale(1.05);
+}
+
+.saw-hero-image-corner {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-top: 1px solid rgba(255,255,255,.7);
+    border-right: 1px solid rgba(255,255,255,.7);
+    z-index: 3;
+    opacity: 0;
+    animation: sawFade .8s ease 1.5s forwards;
+}
+
+/* ---------- ROTATING BADGE ---------- */
+.saw-hero-badge {
+    position: absolute;
+    left: -50px;
+    bottom: 24px;
+    width: 118px;
+    height: 118px;
+    z-index: 5;
+    opacity: 0;
+    animation: sawBadgeIn 1s cubic-bezier(.34,1.56,.64,1) 1.4s forwards;
+}
+
+.badge-ring {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    animation: sawBadgeRotate 20s linear infinite;
+}
+
+.badge-ring text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    fill: #fff;
+    text-transform: uppercase;
+}
+
+.badge-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #C94B5C;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    transition: transform .4s cubic-bezier(.16,1,.3,1);
+}
+
+.saw-hero-badge:hover .badge-center {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.08);
+}
+
+/* ---------- BOTTOM NUMBER ---------- */
+.saw-hero-num {
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    opacity: 0;
+    animation: sawFade .9s ease 1.6s forwards;
+    pointer-events: none;
+}
+
+.saw-hero-num strong {
+    font-family: "Playfair Display", serif;
+    font-size: 62px;
+    font-weight: 500;
+    line-height: .85;
+    color: #160B20;
+    letter-spacing: -3px;
+}
+
+.saw-hero-num span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #817485;
+}
+
+/* ---------- STAT RAIL ---------- */
+.saw-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 22px 0;
+    border-top: 1px solid rgba(53,18,79,.12);
+    border-bottom: 1px solid rgba(53,18,79,.12);
+    opacity: 0;
+    animation: sawFadeUp 1s cubic-bezier(.16,1,.3,1) 1.5s forwards;
+}
+
+.saw-stat {
+    position: relative;
+    padding: 0 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-right: 1px solid rgba(53,18,79,.08);
+    transition: padding-left .4s cubic-bezier(.16,1,.3,1);
+}
+
+.saw-stat:first-child { padding-left: 0; }
+.saw-stat:last-child  { border-right: 0; }
+
+.saw-stat strong {
+    display: inline-flex;
+    align-items: flex-start;
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -1.5px;
+    color: #160B20;
+    transition: color .35s ease;
+}
+
+.saw-stat strong span {
+    font-size: .55em;
+    color: #C94B5C;
+    margin-top: .15em;
+    margin-left: 2px;
+    transition: transform .4s cubic-bezier(.16,1,.3,1);
+}
+
+.saw-stat > span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: #817485;
+}
+
+.saw-stat::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 0;
+    height: 2px;
+    background: #C94B5C;
+    transition: width .4s cubic-bezier(.16,1,.3,1);
+}
+
+.saw-stat:hover              { padding-left: 38px; }
+.saw-stat:hover::before      { width: 24px; }
+.saw-stat:hover strong       { color: #C94B5C; }
+.saw-stat:hover strong span  { transform: translateY(-4px) scale(1.1); }
+
+/* ---------- KEYFRAMES ---------- */
+@keyframes sawFade {
+    to { opacity: 1; }
+}
+@keyframes sawFadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes sawFadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes sawFadeRight {
+    from { opacity: 0; transform: translateX(-20px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes sawLineDraw {
+    to { transform: scaleX(1); }
+}
+@keyframes sawTextReveal {
+    to { transform: translateY(0); }
+}
+@keyframes sawImageReveal {
+    to { clip-path: inset(0 0 0 0); }
+}
+@keyframes sawImageScale {
+    to { transform: scale(1); }
+}
+@keyframes sawBadgeIn {
+    from { opacity: 0; transform: scale(.3) rotate(-45deg); }
+    to   { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+@keyframes sawBadgeRotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Below 992px the max-height cap is released so the stacked layout
+   never clips content on tall phones. */
+@media (max-width: 991.98px) {
+
+    .saw-hero {
+        max-height: none;
+        padding-top: 40px;
+    }
+
+    .saw-hero-main {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding-bottom: 40px;
+    }
+
+    .saw-hero-visual {
+        width: 100%;
+        max-width: 500px;
+        aspect-ratio: 4 / 5;
+        max-height: 560px;
+        margin: 0 auto;
+        justify-self: center;
+    }
+
+    .saw-hero-badge { left: 20px; bottom: 20px; }
+
+    .saw-hero-num { right: 10px; bottom: 10px; }
+    .saw-hero-num strong { font-size: 54px; }
+
+    .saw-hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 0;
+        padding: 26px 0;
+    }
+
+    .saw-stat                    { padding: 0 20px; }
+    .saw-stat:first-child        { padding-left: 0; }
+    .saw-stat:nth-child(2)       { border-right: 0; }
+    .saw-stat:nth-child(1),
+    .saw-stat:nth-child(2) {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(53,18,79,.08);
+    }
+    .saw-stat:nth-child(3),
+    .saw-stat:nth-child(4) { padding-top: 20px; }
+}
+
+/* Between 992px and ~1200px, cap the visual a bit shorter so it fits
+   the 75vh budget on shorter laptops. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .saw-hero-visual {
+        max-height: 400px;
+    }
+    .saw-hero-title {
+        font-size: clamp(36px, 4.4vw, 62px);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .saw-hero          { padding-top: 32px; }
+    .saw-hero-top      { padding-bottom: 34px; }
+    .saw-hero-title    { font-size: clamp(38px, 10vw, 56px); letter-spacing: -2px; }
+    .saw-hero-desc     { font-size: 13.5px; }
+    .saw-stat strong   { font-size: 30px; }
+}
+
+@media (max-width: 575.98px) {
+    .saw-hero-kicker .kicker-text { font-size: 10px; letter-spacing: 3.5px; }
+    .saw-hero-title               { font-size: 40px; letter-spacing: -1.5px; }
+    .saw-hero-actions             { gap: 16px; }
+    .saw-hero-cta                 { padding: 14px 20px; }
+    .saw-hero-cta .cta-text       { font-size: 10px; letter-spacing: 2.2px; }
+    .saw-hero-badge               { width: 96px; height: 96px; left: 14px; bottom: 14px; }
+    .badge-center                 { width: 44px; height: 44px; font-size: 16px; }
+    .saw-hero-num strong          { font-size: 42px; }
+    .saw-stat strong              { font-size: 26px; }
+    .saw-stat > span              { font-size: 9px; letter-spacing: 1.6px; }
+}
+    </style>
+
+</head>
+<body>
+
+
+<!-- =====================================================
+     SOWKAR HEADER
+====================================================== -->
+
+<header
+    id="sowkarMainHeader"
+    class="sowkar-main-header"
+>
+
+    <nav class="navbar navbar-expand-lg sowkar-navbar">
+
+        <div class="container-fluid sowkar-navbar-container">
+
+            <!-- LOGO -->
+            <a class="navbar-brand sowkar-brand" href="index.html">
+
+                <figure>
+                    <img
+                        src="images/sowkar-textiles-logo.png"
+                        alt="Sowkar Textiles & Uniforms"
+                        title="Sowkar Textiles & Uniforms Logo"
+                        class="sowkar-brand-logo"
+                        loading="lazy"
+                    >
+                    <figcaption class="cr-only">
+                        Sowkar Textiles and Uniforms official brand logo.
+                    </figcaption>
+                </figure>
+
+            </a>
+
+
+            <!-- MOBILE TOGGLER -->
+            <button
+                class="navbar-toggler sowkar-menu-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#sowkarNavigation"
+                aria-controls="sowkarNavigation"
+                aria-label="Open navigation"
+            >
+
+                <span class="sowkar-toggler-icon">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+            </button>
+
+
+            <!-- NAVIGATION -->
+            <div
+                class="offcanvas-lg offcanvas-end sowkar-navigation-offcanvas"
+                tabindex="-1"
+                id="sowkarNavigation"
+                aria-labelledby="sowkarNavigationLabel"
+            >
+
+                <div class="offcanvas-header sowkar-offcanvas-header">
+
+                    <div
+                        id="sowkarNavigationLabel"
+                        class="sowkar-mobile-brand"
+                    >
+
+                        <figure>
+                            <img
+                                src="images/sowkar-textiles-logo.png"
+                                alt="Sowkar Textiles & Uniforms"
+                                title="Sowkar Textiles & Uniforms Mobile Logo"
+                                loading="lazy"
+                            >
+                            <figcaption class="cr-only">
+                                Sowkar Textiles navigation menu brand identity logo.
+                            </figcaption>
+                        </figure>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="sowkar-offcanvas-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close navigation"
+                    ></button>
+
+                </div>
+
+
+                <div class="offcanvas-body sowkar-navigation-body">
+
+                    <ul class="navbar-nav sowkar-main-menu ms-auto">
+
+                        <!-- HOME -->
+                        <li class="nav-item sowkar-menu-item">
+
+                            <a class="nav-link sowkar-menu-link" href="index.html">
+                                Home
+                            </a>
+
+                        </li>
+
+
+                        <!-- ABOUT -->
+                        <li class="nav-item sowkar-menu-item">
+
+                            <a
+                                class="nav-link sowkar-menu-link active"
+                                href="sowkar-textiles-about-us.html"
+                            >
+                                About Us
+                            </a>
+
+                        </li>
+
+
+                        <!-- PRODUCTS -->
+                        <li class="nav-item dropdown sowkar-menu-item sowkar-products-menu">
+
+                            <a
+                                class="nav-link dropdown-toggle sowkar-menu-link sowkar-products-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+
+                                <span>
+                                    Products
+                                </span>
+
+                                <span class="sowkar-products-arrow">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+
+                            </a>
+
+
+                            <div class="dropdown-menu sowkar-products-mega-menu">
+
+                                <div class="sowkar-mega-inner">
+
+                                    <!-- FEATURE -->
+                                    <div class="sowkar-healthcare-feature">
+
+                                        <div class="sowkar-feature-top">
+
+                                            <div class="sowkar-feature-icon">
+                                                <i class="bi bi-heart-pulse-fill"></i>
+                                            </div>
+
+                                            <div>
+
+                                                <span class="sowkar-feature-label">
+                                                    FEATURED CATEGORY
+                                                </span>
+
+                                                <h3>
+                                                    Health Care
+                                                </h3>
+
+                                            </div>
+
+                                        </div>
+
+                                        <p>
+                                            Professional uniforms and
+                                            linen solutions designed
+                                            for hospitals, healthcare
+                                            teams and medical environments.
+                                        </p>
+
+                                        <a
+                                            href="sowkar-textiles-products-scrub-suits.html"
+                                            class="sowkar-healthcare-view"
+                                        >
+
+                                            Explore Health Care
+
+                                            <span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </span>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- HEALTHCARE LIST -->
+                                    <div class="sowkar-healthcare-list">
+
+                                        <div class="sowkar-mega-heading">
+
+                                            <span>
+                                                Health Care Collection
+                                            </span>
+
+                                            <i class="bi bi-heart-pulse"></i>
+
+                                        </div>
+
+
+                                        <div class="sowkar-healthcare-grid">
+                                            <a href="sowkar-textiles-products-scrub-suits.html">
+                                                <span>
+                                                    <i class="bi bi-person-badge"></i>
+                                                    Scrub Suits
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                            <a href="sowkar-textiles-products-doctor-coats.html">
+                                                <span>
+                                                    <i class="bi bi-person"></i>
+                                                    Doctor Coats
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                            <a href="sowkar-textiles-products-Nurse-uniforms.html">
+                                                <span>
+                                                    <i class="bi bi-heart"></i>
+                                                    Nurse Uniforms
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                            <a href="sowkar-textiles-products-hospital-staff-uniforms.html">
+                                                <span>
+                                                    <i class="bi bi-hospital"></i>
+                                                    Hospital Staff Uniforms
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                            <a href="sowkar-textiles-products-lab-coats.html">
+                                                <span>
+                                                    <i class="bi bi-eyedropper"></i>
+                                                    Lab Coats
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                            <a href="sowkar-textiles-products-patient-gown.html">
+                                                <span>
+                                                    <i class="bi bi-person-standing"></i>
+                                                    Patient Gown
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                            <a href="sowkar-textiles-products-ot-gown.html">
+                                                <span>
+                                                    <i class="bi bi-shield-check"></i>
+                                                    OT Gown
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                            <a href="sowkar-textiles-products-bedsheets-mackintosh.html">
+                                                <span>
+                                                    <i class="bi bi-layers"></i>
+                                                    Bedsheets / Mackintosh Sheet
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                            <a href="sowkar-textiles-products-hospital-accessories.html">
+                                                <span>
+                                                    <i class="bi bi-plus-square"></i>
+                                                    Hospital Accessories
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- OTHER SOLUTIONS -->
+                                    <div class="sowkar-other-solutions">
+
+                                        <div class="sowkar-mega-heading">
+                                            <span>
+                                                Other Solutions
+                                            </span>
+                                        </div>
+
+                                        <a
+                                            href="sowkar-textiles-products-corporate-uniforms.html"
+                                            class="sowkar-other-product"
+                                        >
+
+                                            <span class="sowkar-other-number">01</span>
+
+                                            <span class="sowkar-other-content">
+
+                                                <strong>
+                                                    Corporate Uniforms
+                                                </strong>
+
+                                                <small>
+                                                    Professional workplace wear
+                                                </small>
+
+                                            </span>
+
+                                            <i class="bi bi-arrow-up-right"></i>
+
+                                        </a>
+
+                                        <a
+                                            href="sowkar-textiles-products-education-uniforms.html"
+                                            class="sowkar-other-product"
+                                        >
+
+                                            <span class="sowkar-other-number">02</span>
+
+                                            <span class="sowkar-other-content">
+
+                                                <strong>
+                                                    Education Uniforms
+                                                </strong>
+
+                                                <small>
+                                                    School &amp; college uniforms
+                                                </small>
+
+                                            </span>
+
+                                            <i class="bi bi-arrow-up-right"></i>
+
+                                        </a>
+
+                                        <a
+                                            href="sowkar-textiles-products-industry-uniforms.html"
+                                            class="sowkar-other-product"
+                                        >
+
+                                            <span class="sowkar-other-number">03</span>
+
+                                            <span class="sowkar-other-content">
+
+                                                <strong>
+                                                    Industry
+                                                </strong>
+
+                                                <small>
+                                                    Industrial workwear
+                                                </small>
+
+                                            </span>
+
+                                            <i class="bi bi-arrow-up-right"></i>
+
+                                        </a>
+
+                                        <a
+                                            href="sowkar-textiles-products-hospitality-uniforms.html"
+                                            class="sowkar-other-product"
+                                        >
+
+                                            <span class="sowkar-other-number">04</span>
+
+                                            <span class="sowkar-other-content">
+
+                                                <strong>
+                                                    Hospitality
+                                                </strong>
+
+                                                <small>
+                                                    Hotel &amp; service uniforms
+                                                </small>
+
+                                            </span>
+
+                                            <i class="bi bi-arrow-up-right"></i>
+
+                                        </a>
+
+                                        <a
+                                            href="sowkar-textiles-products-t-shirts.html"
+                                            class="sowkar-other-product"
+                                        >
+
+                                            <span class="sowkar-other-number">05</span>
+
+                                            <span class="sowkar-other-content">
+
+                                                <strong>
+                                                    T-Shirts
+                                                </strong>
+
+                                                <small>
+                                                    Custom apparel &amp; branding
+                                                </small>
+
+                                            </span>
+
+                                            <i class="bi bi-arrow-up-right"></i>
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+
+                        <!-- INFRASTRUCTURE -->
+                        <li class="nav-item sowkar-menu-item">
+
+                            <a class="nav-link sowkar-menu-link" href="sowkar-textiles-infrastructure.html">
+                                Infrastructure
+                            </a>
+
+                        </li>
+
+
+                        <!-- CLIENTS -->
+                        <li class="nav-item sowkar-menu-item">
+
+                            <a class="nav-link sowkar-menu-link" href="sowkar-textiles-clients.html">
+                                Clients
+                            </a>
+
+                        </li>
+
+
+                        <!-- GALLERY -->
+                        <!-- <li class="nav-item sowkar-menu-item">
+
+                            <a class="nav-link sowkar-menu-link" href="sowkar-textiles-gallery.html">
+                                Gallery
+                            </a>
+
+                        </li> -->
+
+
+                        <!-- CONTACT -->
+                        <li class="nav-item sowkar-menu-item">
+
+                            <a class="nav-link sowkar-menu-link" href="sowkar-textiles-contacts.html">
+                                Contact Us
+                            </a>
+
+                        </li>
+
+
+                        <!-- ENQUIRY -->
+                        <li class="nav-item sowkar-enquiry-item">
+
+                            <a href="sowkar-textiles-contacts.html#contactFormSection" class="sowkar-enquiry-button">
+
+                                <span>
+                                    Enquiry Now
+                                </span>
+
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<article>
+
+
+<!-- =========================================================
+     ABOUT HERO — EDITORIAL PORTRAIT
+========================================================= -->
+
+<section class="saw-hero">
+
+    <div class="container">
+        <div class="saw-hero-inner">
+
+            <!-- TOP BAR -->
+            <div class="saw-hero-top">
+
+                <nav class="saw-crumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span aria-hidden="true"></span>
+                    <span class="is-active">About Us</span>
+                </nav>
+
+                <span class="saw-hero-index">— 01</span>
+
+            </div>
+
+
+            <!-- MAIN GRID -->
+            <div class="saw-hero-main">
+
+                <!-- LEFT: TYPOGRAPHY -->
+                <div class="saw-hero-content">
+
+                    <div class="saw-hero-kicker">
+                        <span class="kicker-line"></span>
+                        <span class="kicker-text">The Sowkar Story</span>
+                    </div>
+
+                    <h1 class="saw-hero-title">
+                        <span class="line"><span>Weaving Trust</span></span>
+                        <span class="line"><span>Into Every</span></span>
+                        <span class="line"><span><em>Thread.</em></span></span>
+                    </h1>
+
+                    <p class="saw-hero-desc">
+                        SOWKAR TEXTILES &amp; UNIFORMS is a Mangalore-based
+                        uniform manufacturer crafting professional wear
+                        for institutions across India.
+                    </p>
+
+                    <div class="saw-hero-actions">
+
+                        <a href="#who-we-are" class="saw-hero-cta">
+                            <span class="cta-bg"></span>
+                            <span class="cta-text">Discover Our Story</span>
+                            <i class="bi bi-arrow-down-right"></i>
+                        </a>
+
+                        <span class="saw-hero-tag">
+                            <span class="tag-line"></span>
+                            Quality Wear for a Brighter Tomorrow
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT: VISUAL -->
+                <div class="saw-hero-visual">
+
+                    <div class="saw-hero-image-wrap">
+                        <div class="saw-hero-image">
+                            <figure>
+                                <img
+                                    src="images/sowkar-textiles-welcome-img.jpg"
+                                    alt="Sowkar Textiles craftsmanship"
+                                    title="Sowkar Textiles Textile Craftsmanship"
+                                    loading="lazy"
+                                >
+                                <figcaption class="cr-only">
+                                    Crafting superior quality medical, corporate, industrial, and institutional uniform textiles.
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="saw-hero-image-corner"></div>
+                    </div>
+
+
+                    <!-- ROTATING SVG BADGE -->
+                    <div class="saw-hero-badge">
+                        <svg class="badge-ring" viewBox="0 0 100 100" aria-hidden="true">
+                            <defs>
+                                <path
+                                    id="sawBadgePath"
+                                    d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                                ></path>
+                            </defs>
+                            <text>
+                                <textPath href="#sawBadgePath" startOffset="0%">
+                                    Crafted in Mangalore · India · Crafted in Mangalore · India ·
+                                </textPath>
+                            </text>
+                        </svg>
+                        <div class="badge-center">
+                            <i class="bi bi-arrow-down-right"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="saw-hero-num">
+                        <strong>01</strong>
+                        <span>/ About</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTTOM STAT RAIL -->
+            <div class="saw-hero-stats">
+
+                <div class="saw-stat">
+                    <strong>25,000<span>+</span></strong>
+                    <span>Sq.Ft Facility</span>
+                </div>
+
+                <div class="saw-stat">
+                    <strong>100<span>+</span></strong>
+                    <span>Machines</span>
+                </div>
+
+                <div class="saw-stat">
+                    <strong>150<span>+</span></strong>
+                    <span>Skilled Hands</span>
+                </div>
+
+                <div class="saw-stat">
+                    <strong>500<span>+</span></strong>
+                    <span>Clients Served</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HERO STAT STRIP
+========================================================= -->
+
+<section class="sowkar-stat-strip">
+
+    <div class="container">
+
+        <div class="sowkar-stat-strip-inner">
+
+            <div class="sowkar-stat">
+
+                <strong>
+                    25,000+
+                </strong>
+
+                <span>
+                    Sq.Ft Facility
+                </span>
+
+            </div>
+
+
+            <div class="sowkar-stat">
+
+                <strong>
+                    100+
+                </strong>
+
+                <span>
+                    Machines
+                </span>
+
+            </div>
+
+
+            <div class="sowkar-stat">
+
+                <strong>
+                    150+
+                </strong>
+
+                <span>
+                    Skilled Hands
+                </span>
+
+            </div>
+
+
+            <div class="sowkar-stat">
+
+                <strong>
+                    500+
+                </strong>
+
+                <span>
+                    Clients Served
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     02 · WHO WE ARE
+========================================================= -->
+
+<section class="sowkar-who" id="who-we-are">
+
+    <div class="sowkar-about-watermark">S</div>
+
+    <div class="container">
+
+        <div class="row align-items-center g-0">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-6">
+
+                <div class="sowkar-about-content">
+
+                    <div class="sowkar-about-kicker">
+
+                        <span class="sowkar-kicker-dot"></span>
+
+                        WHO WE ARE
+
+                    </div>
+
+
+                    <h2 class="sowkar-about-title">
+
+                        More Than a Uniform.
+                        <br>
+
+                        <span>A Standard of</span>
+
+                        <br>
+
+                        Professionalism.
+
+                    </h2>
+
+
+                    <div class="sowkar-about-copy">
+
+                        <p>
+                            SOWKAR TEXTILES &amp; UNIFORMS is a
+                            Mangalore-based uniform manufacturing
+                            house serving healthcare, education,
+                            corporate, hospitality and industrial
+                            sectors across India.
+                        </p>
+
+                        <p>
+                            We believe a uniform is not just fabric
+                            stitched together. It is the first
+                            impression of an institution, the daily
+                            comfort of a professional, and the silent
+                            signature of an organisation.
+                        </p>
+
+                        <p>
+                            What sets us apart is not what we say —
+                            it is what we build. A 25,000+ sq.ft.
+                            production facility, 100+ advanced
+                            machines, and a team of 150+ skilled
+                            craftspeople working with one constant
+                            focus: fit, finish and fabric.
+                        </p>
+
+                    </div>
+
+
+                    <!-- CAPABILITY CHIPS -->
+                    <div class="sowkar-about-features">
+
+                        <div class="sowkar-about-feature">
+
+                            <div class="sowkar-about-feature-icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    25,000+ Sq.Ft Facility
+                                </h4>
+
+                                <p>
+                                    A production floor built
+                                    for scale and consistency.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="sowkar-about-feature">
+
+                            <div class="sowkar-about-feature-icon sowkar-red-icon">
+                                <i class="bi bi-gear"></i>
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    100+ Advanced Machines
+                                </h4>
+
+                                <p>
+                                    Precision machinery across
+                                    every production stage.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="sowkar-about-feature">
+
+                            <div class="sowkar-about-feature-icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    150+ Skilled Craftspeople
+                                </h4>
+
+                                <p>
+                                    Experienced hands behind
+                                    every finished garment.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CTA -->
+                    <a href="sowkar-textiles-infrastructure.html" class="sowkar-about-btn">
+
+                        <span>
+                            SEE OUR INFRASTRUCTURE
+                        </span>
+
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT VISUAL -->
+            <div class="col-lg-6">
+
+                <div class="sowkar-about-visual">
+
+                    <div class="sowkar-about-orbit"></div>
+
+
+                    <div class="sowkar-about-image">
+
+                        <figure>
+                            <img
+                                src="images/sowkar-textiles-welcome-img.jpg"
+                                alt="SOWKAR Textiles and Uniforms"
+                                title="SOWKAR Textiles and Uniforms Manufacturing"
+                                loading="lazy"
+                            >
+                            <figcaption class="cr-only">
+                                Dedicated uniform manufacturing excellence and premium fabric sourcing at Sowkar Textiles.
+                            </figcaption>
+                        </figure>
+
+                    </div>
+
+
+                    <div class="sowkar-about-mini-image">
+
+                        <figure>
+                            <img
+                                src="images/sowkar-textiles-uniform-detail.jpg"
+                                alt="SOWKAR Uniform Detail"
+                                title="SOWKAR Uniform Stitching Detail"
+                                loading="lazy"
+                            >
+                            <figcaption class="cr-only">
+                                Precision stitching, durable seams, and premium fabric details tailored for working professionals.
+                            </figcaption>
+                        </figure>
+
+                    </div>
+
+
+                    <div class="sowkar-about-label">
+
+                        <span class="sowkar-label-small">
+                            CRAFTED FOR
+                        </span>
+
+                        <strong>
+                            PROFESSIONALS
+                        </strong>
+
+                        <span class="sowkar-label-arrow">
+                            <i class="bi bi-arrow-down-right"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="sowkar-about-side-text">
+
+                        QUALITY · COMFORT · IDENTITY
+
+                    </div>
+
+
+                    <div class="sowkar-about-dots">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     03 · WHAT DRIVES US — MISSION · VISION · VALUES
+========================================================= -->
+
+<section class="sowkar-mvv" id="what-drives-us">
+
+    <div class="container">
+
+        <!-- HEADING -->
+        <div class="row justify-content-center">
+
+            <div class="col-lg-10 text-center">
+
+                <div class="sowkar-mvv-label">
+                    WHAT DRIVES US
+                </div>
+
+                <h2 class="sowkar-mvv-heading">
+
+                    MISSION. VISION.
+                    <span>VALUES.</span>
+
+                </h2>
+
+                <div class="sowkar-mvv-divider">
+
+                    <span></span>
+                    <i></i>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARDS -->
+        <div class="sowkar-mvv-grid">
+
+
+            <!-- MISSION -->
+            <div class="sowkar-mvv-card">
+
+                <div class="sowkar-mvv-icon">
+                    <i class="bi bi-bullseye"></i>
+                </div>
+
+                <h3>
+                    Our Mission
+                </h3>
+
+                <div class="sowkar-mvv-line"></div>
+
+                <p>
+                    To manufacture uniforms that combine comfort,
+                    durability and design — delivered on time, at
+                    scale, without compromising a single stitch.
+                </p>
+
+            </div>
+
+
+            <!-- VISION -->
+            <div class="sowkar-mvv-card">
+
+                <div class="sowkar-mvv-icon">
+                    <i class="bi bi-eye"></i>
+                </div>
+
+                <h3>
+                    Our Vision
+                </h3>
+
+                <div class="sowkar-mvv-line"></div>
+
+                <p>
+                    To be India's most trusted uniform partner —
+                    the name institutions think of first when they
+                    think of professional wear.
+                </p>
+
+            </div>
+
+
+            <!-- VALUES -->
+            <div class="sowkar-mvv-card">
+
+                <div class="sowkar-mvv-icon">
+                    <i class="bi bi-gem"></i>
+                </div>
+
+                <h3>
+                    Our Values
+                </h3>
+
+                <div class="sowkar-mvv-line"></div>
+
+                <ul class="sowkar-mvv-list">
+
+                    <li>
+                        <i class="bi bi-check2-circle"></i>
+
+                        <span>
+                            <strong>Quality First</strong> — Every garment
+                            inspected before it leaves our floor.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check2-circle"></i>
+
+                        <span>
+                            <strong>Integrity</strong> — Honest pricing,
+                            honest timelines, honest fabric.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check2-circle"></i>
+
+                        <span>
+                            <strong>Craftsmanship</strong> — Skilled hands,
+                            precise stitching, lasting finish.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check2-circle"></i>
+
+                        <span>
+                            <strong>Partnership</strong> — We grow when
+                            our clients look good.
+                        </span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     04 · WHY CHOOSE SOWKAR
+========================================================= -->
+
+<section class="sowkar-highlight" id="why-choose-us">
+
+    <div class="container">
+
+        <!-- SECTION HEADING -->
+        <div class="row justify-content-center">
+
+            <div class="col-lg-10 text-center">
+
+                <div class="sowkar-highlight-label">
+                    WHY CHOOSE SOWKAR
+                </div>
+
+                <h2 class="sowkar-highlight-heading">
+                    THE FINEST DETAILS.
+                    <span>EXCEPTIONAL UNIFORMS.</span>
+                </h2>
+
+                <div class="sowkar-highlight-divider">
+                    <span></span>
+                    <i></i>
+                    <span></span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HIGHLIGHTS -->
+        <div class="row sowkar-highlight-items g-0">
+
+            <!-- ITEM 1 -->
+            <div class="col-6 col-lg-3">
+
+                <div class="sowkar-highlight-item">
+
+                    <div class="sowkar-highlight-icon">
+                        <i class="bi bi-gem"></i>
+                    </div>
+
+                    <h3>PREMIUM FABRICS</h3>
+
+                    <div class="sowkar-item-line"></div>
+
+                    <p>
+                        Sourced for comfort, strength
+                        &amp; colour retention.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 2 -->
+            <div class="col-6 col-lg-3">
+
+                <div class="sowkar-highlight-item">
+
+                    <div class="sowkar-highlight-icon">
+                        <i class="bi bi-rulers"></i>
+                    </div>
+
+                    <h3>PRECISE FIT</h3>
+
+                    <div class="sowkar-item-line"></div>
+
+                    <p>
+                        Size sets tailored to your team,
+                        not generic charts.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 3 -->
+            <div class="col-6 col-lg-3">
+
+                <div class="sowkar-highlight-item">
+
+                    <div class="sowkar-highlight-icon">
+                        <i class="bi bi-boxes"></i>
+                    </div>
+
+                    <h3>BULK CAPACITY</h3>
+
+                    <div class="sowkar-item-line"></div>
+
+                    <p>
+                        Thousands of pieces, consistent
+                        quality, on schedule.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 4 -->
+            <div class="col-6 col-lg-3">
+
+                <div class="sowkar-highlight-item">
+
+                    <div class="sowkar-highlight-icon">
+                        <i class="bi bi-brush"></i>
+                    </div>
+
+                    <h3>CUSTOM BRANDING</h3>
+
+                    <div class="sowkar-item-line"></div>
+
+                    <p>
+                        Logos, embroidery, colour
+                        matching to your identity.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FABRIC IMAGE STRIP -->
+    <div class="sowkar-highlight-fabric">
+
+        <figure>
+            <img
+                src="images/sowkar-textiles-highlights.jpg"
+                alt="Premium Uniform Fabrics"
+                title="Premium Uniform Fabric Materials and Textures"
+                loading="lazy"
+            >
+            <figcaption class="cr-only">
+                Curated selection of high-grade institutional, healthcare, and corporate uniform textiles.
+            </figcaption>
+        </figure>
+
+    </div>
+
+
+    <!-- BOTTOM STATEMENT -->
+    <div class="container">
+
+        <div class="sowkar-highlight-bottom">
+
+            <span></span>
+
+            <i class="bi bi-diamond-fill"></i>
+
+            <p>
+                QUALITY THAT REPRESENTS.
+                UNIFORMS THAT PERFORM.
+            </p>
+
+            <i class="bi bi-diamond-fill"></i>
+
+            <span></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     05 · CTA
+========================================================= -->
+
+<section class="sowkar-cta">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-11">
+
+                <div class="sowkar-cta-content text-center">
+
+                    <!-- Small Label -->
+                    <div class="sowkar-cta-label">
+                        LET'S WORK TOGETHER
+                    </div>
+
+                    <!-- Red Line -->
+                    <div class="sowkar-cta-line"></div>
+
+                    <!-- Heading -->
+                    <h2 class="sowkar-cta-heading">
+                        Need Customized
+                        <span>Uniforms?</span>
+                    </h2>
+
+                    <!-- Description -->
+                    <p class="sowkar-cta-text">
+                        Get in touch with our team for the right uniform solutions
+                        tailored to your institution, business or industry.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="sowkar-cta-buttons">
+
+                        <a href="sowkar-textiles-contacts.html" class="sowkar-cta-btn sowkar-cta-btn-primary">
+                            <span>GET A QUOTE</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                        <a href="sowkar-textiles-contacts.html" class="sowkar-cta-btn sowkar-cta-btn-outline">
+                            CONTACT US
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</article>
+
+
+
+<!-- =========================
+     SOWKAR FOOTER
+========================= -->
+
+<footer class="sowkar-footer">
+
+    <div class="container">
+
+        <div class="row sowkar-footer-main">
+
+            <!-- BRAND -->
+            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0 sowkar-footer-socials">
+
+                <div class="sowkar-footer-brand">
+
+                    <a href="index.html" class="sowkar-footer-logo">
+
+                        <figure>
+                            <img
+                                src="images/sowkar-textiles-logo1.png"
+                                class="img-fluid"
+                                alt="Sowkar Textiles & Uniforms Logo"
+                                title="Sowkar Textiles Footer Brand Logo"
+                                loading="lazy"
+                            />
+                            <figcaption class="cr-only">
+                                Sowkar Textiles and Uniforms footer brand emblem.
+                            </figcaption>
+                        </figure>
+
+                    </a>
+
+                    <div class="sowkar-footer-line"></div>
+
+                    <div class="sowkar-footer-tagline">
+                        QUALITY WEAR<br>
+                        FOR A BRIGHTER TOMORROW
+                    </div>
+
+                    <p>
+                        Your trusted partner for premium textiles,
+                        uniforms and customized apparel solutions.
+                    </p>
+
+                </div>
+
+                <!-- Social Media -->
+                <div class="sowkar-footer-social">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/sowkar_uniforms/" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <!-- <a href="#" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a> -->
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+
+                <div class="sowkar-footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">
+                                <i class="bi bi-chevron-right"></i>
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sowkar-textiles-about-us.html">
+                                <i class="bi bi-chevron-right"></i>
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#products">
+                                <i class="bi bi-chevron-right"></i>
+                                Products
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sowkar-textiles-infrastructure.html">
+                                <i class="bi bi-chevron-right"></i>
+                                Infrastructure
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sowkar-textiles-clients.html">
+                                <i class="bi bi-chevron-right"></i>
+                                Our Clients
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sowkar-textiles-testimonials.html">
+                                <i class="bi bi-chevron-right"></i>
+                                Testimonials
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sowkar-textiles-contacts.html">
+                                <i class="bi bi-chevron-right"></i>
+                                Contact Us
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTS -->
+            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+
+                <div class="sowkar-footer-column">
+
+                    <h3>Our Products</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="sowkar-textiles-products-scrub-suits.html">
+                                <i class="bi bi-chevron-right"></i>
+                                Healthcare
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sowkar-textiles-products-corporate-uniforms.html">
+                                <i class="bi bi-chevron-right"></i>
+                                Corporate Uniforms
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sowkar-textiles-products-education-uniforms.html">
+                                <i class="bi bi-chevron-right"></i>
+                                Education Uniforms
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sowkar-textiles-products-industry-uniforms.html">
+                                <i class="bi bi-chevron-right"></i>
+                                Industry
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sowkar-textiles-products-hospitality-uniforms.html">
+                                <i class="bi bi-chevron-right"></i>
+                                Hospitality
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sowkar-textiles-products-t-shirts.html">
+                                <i class="bi bi-chevron-right"></i>
+                                T-Shirts
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="sowkar-footer-column sowkar-footer-contact">
+
+                    <h3>Contact Us</h3>
+
+                    <!-- Address -->
+                    <div class="sowkar-contact-item">
+
+                        <div class="sowkar-contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+
+                        <div>
+                            <span>
+                                Bhola Building, Behind Kankanady Market
+                            </span>
+
+                            <span>
+                                Kankanady, Mangalore – 575002
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+                    <div class="sowkar-contact-item">
+
+                        <div class="sowkar-contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <a href="tel:+919611544600">
+                                +91 96115 44600
+                            </a>
+
+                            <a href="tel:+919739266396">
+                                +91 97392 66396
+                            </a>
+
+                            <a href="tel:+918277194657">
+                                +91 82771 94657
+                            </a>
+
+                            <a href="tel:+919845842587">
+                                +91 98458 42587
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="sowkar-contact-item">
+
+                        <div class="sowkar-contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <a href="mailto:sowkartex@rediffmail.com">
+                                sowkartex@rediffmail.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Divider -->
+                    <div class="sowkar-footer-contact-divider"></div>
+
+
+                    <!-- Working Hours -->
+                    <div class="sowkar-working-hours">
+
+                        <h4>Working Hours</h4>
+
+                        <div class="sowkar-hours-row">
+
+                            <i class="bi bi-clock-fill"></i>
+
+                            <div>
+                                <span>Monday - Saturday</span>
+                                <strong>9:00 AM - 5:30 PM</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM BAR -->
+    <div class="sowkar-footer-bottom">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start">
+
+                    <p>
+                        © 2026 SOWKAR TEXTILES &amp; UNIFORMS.
+                        All Rights Reserved.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-6 text-center text-md-end">
+
+                    <div class="sowkar-powered-by">
+                        Powered by
+                        <a href="https://www.bluelinecomputers.com/" target="_blank" rel="noopener noreferrer">
+                            Blueline Computers
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     FIXED WHATSAPP BUTTON
+========================================= -->
+
+<a
+    href="https://wa.me/919611544600?text=Hello%20SOWKAR%20Textiles%20%26%20Uniforms%2C%20I%20would%20like%20to%20know%20more%20about%20your%20uniforms."
+    class="sowkar-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-bs-toggle="tooltip"
+    data-bs-placement="left"
+    title="Chat with us on WhatsApp"
+    aria-label="Chat with SOWKAR on WhatsApp"
+>
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+
+
+<!-- =====================================================
+     SOWKAR HEADER JAVASCRIPT
+====================================================== -->
+
+<script>
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            const sowkarHeader =
+                document.getElementById("sowkarMainHeader");
+
+            const sowkarProductsMenu =
+                document.querySelector(".sowkar-products-menu");
+
+            const sowkarProductsToggle =
+                document.querySelector(".sowkar-products-toggle");
+
+            const sowkarProductsDropdown =
+                document.querySelector(".sowkar-products-mega-menu");
+
+            const sowkarNavigation =
+                document.getElementById("sowkarNavigation");
+
+            const sowkarCloseButton =
+                document.querySelector(".sowkar-offcanvas-close");
+
+            let sowkarHoverTimeout = null;
+            let sowkarScrollTick = false;
+
+
+            function sowkarIsDesktop() {
+                return window.innerWidth >= 992;
+            }
+
+
+            /* HEADER SCROLL */
+            function sowkarUpdateHeader() {
+
+                if (window.scrollY > 50) {
+
+                    sowkarHeader.classList.add("sowkar-header-scrolled");
+
+                } else {
+
+                    sowkarHeader.classList.remove("sowkar-header-scrolled");
+
+                }
+
+                sowkarScrollTick = false;
+            }
+
+
+            window.addEventListener(
+                "scroll",
+                function () {
+
+                    if (!sowkarScrollTick) {
+
+                        window.requestAnimationFrame(sowkarUpdateHeader);
+
+                        sowkarScrollTick = true;
+
+                    }
+
+                },
+                { passive: true }
+            );
+
+
+            sowkarUpdateHeader();
+
+
+            /* OPEN PRODUCTS */
+            function sowkarOpenProducts() {
+
+                if (!sowkarIsDesktop()) {
+                    return;
+                }
+
+                clearTimeout(sowkarHoverTimeout);
+
+                sowkarProductsMenu.classList.add("show");
+                sowkarProductsDropdown.classList.add("show");
+
+                sowkarProductsToggle.setAttribute("aria-expanded", "true");
+            }
+
+
+            /* CLOSE PRODUCTS */
+            function sowkarCloseProducts(immediate = false) {
+
+                if (!sowkarIsDesktop()) {
+                    return;
+                }
+
+                clearTimeout(sowkarHoverTimeout);
+
+                const sowkarDoClose = function () {
+
+                    sowkarProductsMenu.classList.remove("show");
+                    sowkarProductsDropdown.classList.remove("show");
+
+                    sowkarProductsToggle.setAttribute("aria-expanded", "false");
+
+                };
+
+                if (immediate) {
+
+                    sowkarDoClose();
+
+                } else {
+
+                    sowkarHoverTimeout = setTimeout(sowkarDoClose, 180);
+
+                }
+            }
+
+
+            /* PRODUCTS HOVER */
+            sowkarProductsMenu.addEventListener("mouseenter", function () {
+
+                if (sowkarIsDesktop()) {
+                    sowkarOpenProducts();
+                }
+
+            });
+
+
+            sowkarProductsMenu.addEventListener("mouseleave", function () {
+
+                if (sowkarIsDesktop()) {
+                    sowkarCloseProducts();
+                }
+
+            });
+
+
+            sowkarProductsDropdown.addEventListener("mouseenter", function () {
+
+                if (sowkarIsDesktop()) {
+                    clearTimeout(sowkarHoverTimeout);
+                }
+
+            });
+
+
+            sowkarProductsDropdown.addEventListener("mouseleave", function () {
+
+                if (sowkarIsDesktop()) {
+                    sowkarCloseProducts();
+                }
+
+            });
+
+
+            /* PRODUCTS CLICK */
+            sowkarProductsToggle.addEventListener("click", function (event) {
+
+                if (sowkarIsDesktop()) {
+
+                    event.preventDefault();
+
+                    clearTimeout(sowkarHoverTimeout);
+
+                    const sowkarIsOpen =
+                        sowkarProductsMenu.classList.contains("show");
+
+                    if (sowkarIsOpen) {
+
+                        sowkarCloseProducts(true);
+
+                    } else {
+
+                        sowkarOpenProducts();
+
+                    }
+
+                }
+
+            });
+
+
+            /* OUTSIDE CLICK */
+            document.addEventListener("click", function (event) {
+
+                if (!sowkarIsDesktop()) {
+                    return;
+                }
+
+                if (!sowkarProductsMenu.contains(event.target)) {
+
+                    sowkarCloseProducts(true);
+
+                }
+
+            });
+
+
+            /* OFFCANVAS CLOSE BUTTON */
+            if (sowkarCloseButton) {
+
+                sowkarCloseButton.addEventListener("click", function () {
+
+                    const sowkarOffcanvas =
+                        bootstrap.Offcanvas.getOrCreateInstance(sowkarNavigation);
+
+                    sowkarOffcanvas.hide();
+
+                });
+
+            }
+
+
+            /* MOBILE NAV LINKS */
+            sowkarNavigation
+                .querySelectorAll(".sowkar-main-menu a:not(.sowkar-products-toggle)")
+                .forEach(function (sowkarLink) {
+
+                    sowkarLink.addEventListener("click", function () {
+
+                        if (!sowkarIsDesktop()) {
+
+                            const sowkarOffcanvas =
+                                bootstrap.Offcanvas.getOrCreateInstance(sowkarNavigation);
+
+                            sowkarOffcanvas.hide();
+
+                        }
+
+                    });
+
+                });
+
+
+            /* OFFCANVAS OPEN */
+            sowkarNavigation.addEventListener("show.bs.offcanvas", function () {
+
+                sowkarProductsMenu.classList.remove("show");
+                sowkarProductsDropdown.classList.remove("show");
+
+                sowkarProductsToggle.setAttribute("aria-expanded", "false");
+
+            });
+
+
+            /* RESIZE */
+            window.addEventListener("resize", function () {
+
+                if (!sowkarIsDesktop()) {
+
+                    sowkarProductsMenu.classList.remove("show");
+                    sowkarProductsDropdown.classList.remove("show");
+
+                    sowkarProductsToggle.setAttribute("aria-expanded", "false");
+
+                }
+
+            });
+
+        }
+    );
+
+</script>
+
+
+<!-- =====================================================
+     WHATSAPP TOOLTIP
+====================================================== -->
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const whatsappButton = document.querySelector(
+            '.sowkar-whatsapp[data-bs-toggle="tooltip"]'
+        );
+
+        if (whatsappButton) {
+
+            new bootstrap.Tooltip(whatsappButton);
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

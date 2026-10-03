@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Infrastructure & Manufacturing Excellence | SOWKAR TEXTILES &amp; UNIFORMS</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <meta name="theme-color" content="#031d2b">
+    
+    <!-- FRAMEWORKS & ICONS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    
+    <!-- BRAND TYPOGRAPHY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Urbanist:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- GLOBAL SITE STYLES -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- =========================================================
+         HIGH-IMPACT INFRASTRUCTURE SHOWCASE STYLES
+         Exact Brand Colors, Elevated Architectural Depth, Fresh Design
+    ========================================================== -->
+    <style>
+        /* =========================================================
+           1. HERO: ATELIER INDUSTRIAL HORIZON
+        ========================================================= */
+        .infra-v2-hero {
+            position: relative;
+            width: 100%;
+            height: clamp(540px, 74vh, 670px);
+            min-height: 540px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            isolation: isolate;
+            background:
+                radial-gradient(circle at 82% 38%, rgba(155, 63, 143, 0.28), transparent 38%),
+                radial-gradient(circle at 18% 78%, rgba(201, 75, 92, 0.18), transparent 32%),
+                linear-gradient(135deg, #12081a 0%, #24102F 50%, #160B20 100%);
+        }
+
+        .infra-v2-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(rgba(216, 185, 226, 0.12) 1px, transparent 1px),
+                linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+            background-size: 28px 28px, 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .infra-v2-hero .container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .iv2-crumb-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 16px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 30px;
+            backdrop-filter: blur(8px);
+            margin-bottom: 16px;
+        }
+
+        .iv2-crumb-chip a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .iv2-crumb-chip a:hover {
+            color: var(--sowkar-red-light);
+        }
+
+        .iv2-crumb-chip span {
+            color: var(--sowkar-red-light);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .iv2-hero-heading {
+            margin: 0 0 12px;
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(48px, 4.8vw, 76px);
+            font-weight: 900;
+            line-height: 0.94;
+            letter-spacing: -2.5px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        .iv2-hero-heading span.gradient {
+            background: linear-gradient(135deg, #FFFFFF 15%, var(--sowkar-purple-light) 65%, var(--sowkar-red-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .iv2-hero-heading span.italic {
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+            font-weight: 600;
+            color: var(--sowkar-red-light);
+            text-transform: capitalize;
+            -webkit-text-fill-color: initial;
+            letter-spacing: -1px;
+        }
+
+        .iv2-hero-tagline {
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2.2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 12px;
+        }
+
+        .iv2-hero-tagline strong {
+            color: var(--sowkar-red-light);
+        }
+
+        .iv2-hero-line {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--sowkar-red), var(--sowkar-purple-light));
+            margin-bottom: 16px;
+        }
+
+        .iv2-hero-desc {
+            max-width: 530px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 13.5px;
+            font-weight: 400;
+            line-height: 1.8;
+            color: #E2D2E6;
+            margin-bottom: 24px;
+        }
+
+        .iv2-hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 13px 26px;
+            background: linear-gradient(100deg, var(--sowkar-purple), var(--sowkar-red));
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 4px;
+            color: #FFFFFF;
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+            transition: all 0.35s ease;
+        }
+
+        .iv2-hero-btn:hover {
+            color: #FFFFFF;
+            transform: translateY(-3px);
+            box-shadow: 0 20px 45px rgba(201, 75, 92, 0.4);
+        }
+
+        .iv2-hero-btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 22px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+            color: #FFFFFF;
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-left: 10px;
+            backdrop-filter: blur(10px);
+            transition: all 0.35s ease;
+        }
+
+        .iv2-hero-btn-outline:hover {
+            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--sowkar-red-light);
+            transform: translateY(-3px);
+        }
+
+        /* Sculptural Visual Rig with Live Counters */
+        .iv2-visual-rig {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .iv2-rig-aura {
+            position: absolute;
+            width: 92%;
+            height: 94%;
+            border-radius: 20px 90px 20px 90px;
+            border: 1px dashed rgba(216, 185, 226, 0.3);
+            background: linear-gradient(135deg, rgba(155, 63, 143, 0.15), rgba(201, 75, 92, 0.08));
+            transform: rotate(-3deg);
+            pointer-events: none;
+        }
+
+        .iv2-rig-frame {
+            position: relative;
+            width: 86%;
+            height: 88%;
+            border-radius: 16px 80px 16px 80px;
+            overflow: hidden;
+            box-shadow: 0 30px 65px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            transform: rotate(1deg);
+            transition: transform 0.6s ease;
+        }
+
+        .iv2-visual-rig:hover .iv2-rig-frame {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        .iv2-rig-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.05);
+            transition: transform 0.9s ease;
+        }
+
+        .iv2-visual-rig:hover .iv2-rig-frame img {
+            transform: scale(1);
+        }
+
+        .iv2-rig-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 45%, rgba(36, 16, 47, 0.45) 100%);
+            pointer-events: none;
+        }
+
+        .iv2-hero-float-badge {
+            position: absolute;
+            bottom: -6px;
+            left: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 18px;
+            background: rgba(22, 11, 32, 0.92);
+            border: 1px solid rgba(216, 185, 226, 0.28);
+            border-radius: 10px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+            z-index: 5;
+        }
+
+        .iv2-hero-float-badge i {
+            font-size: 20px;
+            color: var(--sowkar-red-light);
+        }
+
+        .iv2-hero-float-badge strong {
+            display: block;
+            font-family: "Urbanist", sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        .iv2-hero-float-badge small {
+            display: block;
+            font-family: "Montserrat", sans-serif;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--sowkar-lavender);
+        }
+
+        /* =========================================================
+           2. SECTION 2: PRODUCTION ECOSYSTEM METRICS
+        ========================================================= */
+        .infra-v2-metrics {
+            position: relative;
+            padding: 95px 0 90px;
+            background: #FAF6F4;
+            border-bottom: 1px solid rgba(53, 18, 79, 0.08);
+            overflow: hidden;
+        }
+
+        .iv2-section-head {
+            text-align: center;
+            max-width: 740px;
+            margin: 0 auto 52px;
+        }
+
+        .iv2-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            color: var(--sowkar-red);
+        }
+
+        .iv2-main-title {
+            margin: 0 0 14px;
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(34px, 4vw, 54px);
+            font-weight: 300;
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+            text-transform: uppercase;
+            color: var(--sowkar-navy);
+        }
+
+        .iv2-main-title span {
+            font-weight: 800;
+            color: var(--sowkar-red);
+        }
+
+        .iv2-head-desc {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            line-height: 1.75;
+            color: var(--sowkar-text);
+        }
+
+        .iv2-metric-pillar {
+            position: relative;
+            background: #FFFFFF;
+            border: 1px solid rgba(53, 18, 79, 0.08);
+            border-radius: 12px;
+            padding: 34px 26px 30px;
+            box-shadow: 0 12px 30px rgba(53, 18, 79, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .iv2-metric-pillar::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 20px;
+            right: 20px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--sowkar-red), var(--sowkar-purple));
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        .iv2-metric-pillar:hover {
+            transform: translateY(-7px);
+            border-color: rgba(201, 75, 92, 0.35);
+            box-shadow: 0 22px 50px rgba(53, 18, 79, 0.12);
+        }
+
+        .iv2-metric-pillar:hover::before {
+            opacity: 1;
+        }
+
+        .iv2-pillar-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: var(--sowkar-soft);
+            color: var(--sowkar-purple-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 22px;
+            transition: all 0.35s ease;
+        }
+
+        .iv2-metric-pillar:hover .iv2-pillar-icon {
+            background: var(--sowkar-navy);
+            color: #FFFFFF;
+            transform: rotate(-6deg) scale(1.05);
+        }
+
+        .iv2-metric-number {
+            font-family: "Urbanist", sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -1.5px;
+            color: var(--sowkar-navy);
+            margin-bottom: 6px;
+        }
+
+        .iv2-metric-title {
+            font-family: "Montserrat", sans-serif;
+            font-size: 13.5px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--sowkar-red);
+            margin-bottom: 12px;
+        }
+
+        .iv2-metric-text {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            line-height: 1.7;
+            color: var(--sowkar-text);
+        }
+
+        /* =========================================================
+           3. SECTION 3: WORKFLOW HUBS & QUALITY LABORATORY
+        ========================================================= */
+        .infra-v2-workflow {
+            position: relative;
+            padding: 100px 0 95px;
+            background: #FFFFFF;
+            overflow: hidden;
+        }
+
+        .iv2-hub-card {
+            position: relative;
+            background: #FFFFFF;
+            border: 1px solid rgba(53, 18, 79, 0.1);
+            border-radius: 14px;
+            padding: 34px 28px;
+            box-shadow: 0 12px 32px rgba(53, 18, 79, 0.05);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: all 0.4s ease;
+        }
+
+        .iv2-hub-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(201, 75, 92, 0.4);
+            box-shadow: 0 20px 48px rgba(53, 18, 79, 0.1);
+        }
+
+        .iv2-hub-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: "Urbanist", sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--sowkar-red);
+            margin-bottom: 16px;
+        }
+
+        .iv2-hub-badge::after {
+            content: "";
+            width: 24px;
+            height: 1.5px;
+            background: var(--sowkar-red);
+            opacity: 0.5;
+        }
+
+        .iv2-hub-title {
+            margin: 0 0 12px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.25px;
+            text-transform: uppercase;
+            color: var(--sowkar-navy);
+        }
+
+        .iv2-hub-desc {
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            line-height: 1.75;
+            color: #514853;
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+
+        .iv2-hub-specs {
+            list-style: none;
+            padding: 16px 0 0;
+            margin: 0;
+            border-top: 1px solid rgba(53, 18, 79, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .iv2-hub-specs li {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--sowkar-navy);
+        }
+
+        .iv2-hub-specs li i {
+            color: var(--sowkar-red);
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           4. SECTION 4: SOCIAL EMPOWERMENT & SATELLITE CENTRES
+        ========================================================= */
+        .infra-v2-social {
+            position: relative;
+            padding: 100px 0 95px;
+            background: linear-gradient(135deg, #160B20 0%, #24102F 50%, #2D1238 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            color: #FFFFFF;
+            overflow: hidden;
+        }
+
+        .iv2-social-panel {
+            padding-right: 25px;
+        }
+
+        .iv2-social-desc {
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.85;
+            color: var(--sowkar-lavender-light);
+            margin-bottom: 30px;
+        }
+
+        .iv2-satellite-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            padding: 24px 22px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 16px;
+            transition: all 0.35s ease;
+        }
+
+        .iv2-satellite-box:hover {
+            transform: translateY(-4px);
+            border-color: rgba(201, 75, 92, 0.45);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .iv2-satellite-box h4 {
+            margin: 0 0 6px;
+            font-family: "Urbanist", sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .iv2-satellite-box h4 i {
+            color: var(--sowkar-red-light);
+            font-size: 16px;
+        }
+
+        .iv2-satellite-box p {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            font-size: 12.5px;
+            line-height: 1.65;
+            color: var(--sowkar-lavender);
+        }
+
+        .iv2-social-visual-wrap {
+            position: relative;
+            width: 100%;
+            height: 460px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+        .iv2-social-visual-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .iv2-social-visual-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 55%, rgba(22, 11, 32, 0.8) 100%);
+            pointer-events: none;
+        }
+
+        .iv2-social-banner {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(36, 16, 47, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 10px;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            backdrop-filter: blur(8px);
+        }
+
+        .iv2-social-banner i {
+            font-size: 22px;
+            color: var(--sowkar-red-light);
+        }
+
+        .iv2-social-banner span {
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        /* =========================================================
+           5. SECTION 5: CTA (Exact Visual Parity with Styleguide)
+        ========================================================= */
+        .infra-v2-cta {
+            position: relative;
+            padding: 105px 0 110px;
+            background: #FBF8F5;
+            overflow: hidden;
+        }
+
+        .infra-v2-cta::before {
+            content: "";
+            position: absolute;
+            width: 520px;
+            height: 520px;
+            left: -260px;
+            top: -260px;
+            border-radius: 50%;
+            background: rgba(155, 63, 143, 0.035);
+            pointer-events: none;
+        }
+
+        .infra-v2-cta::after {
+            content: "";
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            right: -220px;
+            bottom: -250px;
+            border-radius: 50%;
+            background: rgba(201, 75, 92, 0.025);
+            pointer-events: none;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1199.98px) {
+            .iv2-hero-heading { font-size: 46px; }
+            .iv2-main-title { font-size: 42px; }
+        }
+
+        @media (max-width: 991.98px) {
+            .infra-v2-hero {
+                height: auto;
+                min-height: auto;
+                padding: 60px 0 65px;
+            }
+            .iv2-hero-panel {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .iv2-hero-line {
+                margin: 0 auto 16px;
+            }
+            .iv2-hero-desc {
+                margin: 0 auto 24px;
+            }
+            .iv2-visual-rig {
+                max-width: 380px;
+                height: 320px;
+                margin: 0 auto;
+            }
+            .iv2-social-panel {
+                padding-right: 0;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            .iv2-social-visual-wrap {
+                height: 360px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .iv2-hero-heading { font-size: 32px; letter-spacing: -1px; }
+            .iv2-main-title { font-size: 27px; }
+            .iv2-hero-btn, .iv2-hero-btn-outline {
+                width: 100%;
+                justify-content: center;
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            .iv2-visual-rig { height: 260px; }
+            .iv2-hero-float-badge { left: 0; bottom: -8px; padding: 8px 12px; }
+            .iv2-hero-float-badge strong { font-size: 12px; }
+            .iv2-hero-float-badge small { font-size: 8px; }
+            .iv2-social-visual-wrap { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =====================================================
+         MAIN HEADER (Site Master Header)
+    ====================================================== -->
+    <header id="sowkarMainHeader" class="sowkar-main-header">
+        <nav class="navbar navbar-expand-lg sowkar-navbar">
+            <div class="container-fluid sowkar-navbar-container">
+
+                <a class="navbar-brand sowkar-brand" href="index.html">
+                    <img src="images/sowkar-textiles-logo.png" alt="Sowkar Textiles &amp; Uniforms" class="sowkar-brand-logo">
+                </a>
+
+                <button class="navbar-toggler sowkar-menu-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sowkarNavigation" aria-controls="sowkarNavigation" aria-label="Open navigation">
+                    <span class="sowkar-toggler-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+
+                <div class="offcanvas-lg offcanvas-end sowkar-navigation-offcanvas" tabindex="-1" id="sowkarNavigation" aria-labelledby="sowkarNavigationLabel">
+                    <div class="offcanvas-header sowkar-offcanvas-header">
+                        <div id="sowkarNavigationLabel" class="sowkar-mobile-brand">
+                            <img src="images/sowkar-textiles-logo.png" alt="Sowkar Textiles &amp; Uniforms">
+                        </div>
+                        <button type="button" class="sowkar-offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close navigation"></button>
+                    </div>
+
+                    <div class="offcanvas-body sowkar-navigation-body">
+                        <ul class="navbar-nav sowkar-main-menu ms-auto">
+                            <li class="nav-item sowkar-menu-item">
+                                <a class="nav-link sowkar-menu-link" href="index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item sowkar-menu-item">
+                                <a class="nav-link sowkar-menu-link" href="sowkar-textiles-about-us.html">About Us</a>
+                            </li>
+
+                            <li class="nav-item dropdown sowkar-menu-item sowkar-products-menu">
+                                <a class="nav-link dropdown-toggle sowkar-menu-link sowkar-products-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Products</span>
+                                    <span class="sowkar-products-arrow"><i class="bi bi-chevron-down"></i></span>
+                                </a>
+
+                                <div class="dropdown-menu sowkar-products-mega-menu">
+                                    <div class="sowkar-mega-inner">
+                                        <div class="sowkar-healthcare-feature">
+                                            <div class="sowkar-feature-top">
+                                                <div class="sowkar-feature-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+                                                <div>
+                                                    <span class="sowkar-feature-label">FEATURED CATEGORY</span>
+                                                    <h3>Health Care</h3>
+                                                </div>
+                                            </div>
+                                            <p>Professional uniforms and linen solutions designed for hospitals, healthcare teams and medical environments.</p>
+                                            <a href="/products/health-care" class="sowkar-healthcare-view">
+                                                Explore Health Care
+                                                <span><i class="bi bi-arrow-up-right"></i></span>
+                                            </a>
+                                        </div>
+
+                                        <div class="sowkar-healthcare-list">
+                                            <div class="sowkar-mega-heading">
+                                                <span>Health Care Collection</span>
+                                                <i class="bi bi-heart-pulse"></i>
+                                            </div>
+                                            <div class="sowkar-healthcare-grid">
+                                                <a href="sowkar-textiles-products-scrub-suits.html">
+                                                    <span><i class="bi bi-person-badge"></i> Scrub Suits</span>
+                                                    <i class="bi bi-arrow-up-right"></i>
+                                                </a>
+                                                <a href="sowkar-textiles-products-lab-coats.html#doctorCoatRow">
+                                                    <span><i class="bi bi-person"></i> Doctor Coats</span>
+                                                    <i class="bi bi-arrow-up-right"></i>
+                                                </a>
+                                                <a href="sowkar-textiles-products-Nurse-uniforms.html">
+                                                    <span><i class="bi bi-heart"></i> Nurse Uniforms</span>
+                                                    <i class="bi bi-arrow-up-right"></i>
+                                                </a>
+                                                <a href="/products/health-care/hospital-staff-uniforms">
+                                                    <span><i class="bi bi-hospital"></i> Hospital Staff Uniforms</span>
+                                                    <i class="bi bi-arrow-up-right"></i>
+                                                </a>
+                                                <a href="sowkar-textiles-products-lab-coats.html">
+                                                    <span><i class="bi bi-eyedropper"></i> Lab Coats</span>
+                                                    <i class="bi bi-arrow-up-right"></i>
+                                                </a>
+                                                <a href="/products/health-care/patient-gown">
+                                                    <span><i class="bi bi-person-standing"></i> Patient Gown</span>
+                                                    <i class="bi bi-arrow-up-right"></i>
+                                                </a>
+                                                <a href="/products/health-care/ot-gown">
+                                                    <span><i class="bi bi-shield-check"></i> OT Gown</span>
+                                                    <i class="bi bi-arrow-up-right"></i>
+                                                </a>
+                                                <a href="/products/health-care/bedsheets-mackintosh">
+                                                    <span><i class="bi bi-layers"></i> Bedsheets / Mackintosh Sheet</span>
+                                                    <i class="bi bi-arrow-up-right"></i>
+                                                </a>
+                                                <a href="/products/health-care/hospital-accessories">
+                                                    <span><i class="bi bi-plus-square"></i> Hospital Accessories</span>
+                                                    <i class="bi bi-arrow-up-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="sowkar-other-solutions">
+                                            <div class="sowkar-mega-heading"><span>Other Solutions</span></div>
+                                            <a href="/products/corporate-uniforms" class="sowkar-other-product">
+                                                <span class="sowkar-other-number">01</span>
+                                                <span class="sowkar-other-content">
+                                                    <strong>Corporate Uniforms</strong>
+                                                    <small>Professional workplace wear</small>
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                            <a href="/products/education-uniforms" class="sowkar-other-product">
+                                                <span class="sowkar-other-number">02</span>
+                                                <span class="sowkar-other-content">
+                                                    <strong>Education Uniforms</strong>
+                                                    <small>School &amp; college uniforms</small>
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                            <a href="/products/industry" class="sowkar-other-product">
+                                                <span class="sowkar-other-number">03</span>
+                                                <span class="sowkar-other-content">
+                                                    <strong>Industry</strong>
+                                                    <small>Industrial workwear</small>
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                            <a href="/products/hospitality" class="sowkar-other-product">
+                                                <span class="sowkar-other-number">04</span>
+                                                <span class="sowkar-other-content">
+                                                    <strong>Hospitality</strong>
+                                                    <small>Hotel &amp; service uniforms</small>
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                            <a href="/products/t-shirts" class="sowkar-other-product">
+                                                <span class="sowkar-other-number">05</span>
+                                                <span class="sowkar-other-content">
+                                                    <strong>T-Shirts</strong>
+                                                    <small>Custom apparel &amp; branding</small>
+                                                </span>
+                                                <i class="bi bi-arrow-up-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item sowkar-menu-item">
+                                <a class="nav-link sowkar-menu-link active" href="sowkar-textiles-infrastructure.html">Infrastructure</a>
+                            </li>
+
+                            <li class="nav-item sowkar-menu-item">
+                                <a class="nav-link sowkar-menu-link" href="/clients">Clients</a>
+                            </li>
+
+                            <li class="nav-item sowkar-menu-item">
+                                <a class="nav-link sowkar-menu-link" href="/gallery">Gallery</a>
+                            </li>
+
+                            <li class="nav-item sowkar-menu-item">
+                                <a class="nav-link sowkar-menu-link" href="/contact-us">Contact Us</a>
+                            </li>
+
+                            <li class="nav-item sowkar-enquiry-item">
+                                <a href="sowkar-textiles-contacts.html#contactFormSection" class="sowkar-enquiry-button">
+                                    <span>Enquiry Now</span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <article>
+        <!-- =====================================================
+             SECTION 1: HERO SECTION
+             Atelier Horizon, Elevated Editorial Lighting, Sculptural Rig
+        ====================================================== -->
+        <section class="infra-v2-hero" id="infraHero">
+            <div class="container">
+                <div class="row align-items-center g-4 g-lg-5">
+                    
+                    <div class="col-lg-7">
+                        <div class="iv2-hero-panel">
+                            
+                            <div class="iv2-crumb-chip">
+                                <a href="index.html"><i class="bi bi-house-door-fill me-1"></i> Home</a>
+                                <span class="text-white-50">/</span>
+                                <span>Infrastructure</span>
+                            </div>
+
+                            <h1 class="iv2-hero-heading">
+                                BUILT FOR <span class="gradient">SCALE.</span><br>
+                                DRIVEN BY <span class="italic">Precision.</span>
+                            </h1>
+
+                            <div class="iv2-hero-tagline">
+                                Modern Technology <strong>For Uncompromising Quality</strong>
+                            </div>
+
+                            <div class="iv2-hero-line"></div>
+
+                            <p class="iv2-hero-desc">
+                                SOWKAR operates a vertically integrated industrial apparel manufacturing ecosystem in South India[cite: 4]. Combining high-speed specialized machinery, computerized pattern cutting, and community-driven stitching centers, we deliver contract institutional uniform orders with unmatched speed, consistency, and structural endurance.
+                            </p>
+
+                            <div>
+                                <a href="/enquiry" class="iv2-hero-btn">
+                                    <span>Request Factory Tour</span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                                <a href="#workflowHubs" class="iv2-hero-btn-outline">
+                                    <span>Explore Facilities</span>
+                                    <i class="bi bi-arrow-down-short"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="iv2-visual-rig">
+                            <div class="iv2-rig-aura"></div>
+                            <div class="iv2-rig-frame">
+                                <img src="images/sowkar-textiles-infrastructure.jpg" alt="SOWKAR Textiles Manufacturing Plant Facility" />
+                                <div class="iv2-rig-overlay"></div>
+                            </div>
+                            <div class="iv2-hero-float-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                <div>
+                                    <strong>25,000+ SQ. FT.</strong>
+                                    <small>Integrated Facility</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             SECTION 2: PRODUCTION ECOSYSTEM METRICS
+             Architectural Metric Pillars on Alabaster Linen
+        ====================================================== -->
+        <section class="infra-v2-metrics" id="productionMetrics">
+            <div class="container">
+                
+                <div class="iv2-section-head">
+                    <div class="iv2-eyebrow">
+                        <i class="bi bi-bar-chart-fill"></i>
+                        <span>OPERATIONAL BENCHMARK</span>
+                    </div>
+                    <h2 class="iv2-main-title">
+                        EXPANSIVE <span>PRODUCTION CAPACITY</span>
+                    </h2>
+                    <p class="iv2-head-desc">
+                        Our integrated facility in Mangalore is structured to handle bulk contracts effortlessly—supplying thousands of tailored garments monthly without compromising individual stitch integrity.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="iv2-metric-pillar">
+                            <div class="iv2-pillar-icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+                            <div class="iv2-metric-number">25,000+</div>
+                            <div class="iv2-metric-title">Sq. Ft. Floor Area</div>
+                            <p class="iv2-metric-text">
+                                Multi-level facilities accommodating digital pattern labs, raw bolt inventory storage, high-speed stitching floors, and climate-controlled packaging areas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="iv2-metric-pillar">
+                            <div class="iv2-pillar-icon">
+                                <i class="bi bi-gear-wide-connected"></i>
+                            </div>
+                            <div class="iv2-metric-number">100+</div>
+                            <div class="iv2-metric-title">Automated Machines</div>
+                            <p class="iv2-metric-text">
+                                Specialized computerized direct-drive lockstitch, multi-thread overlockers, heavy bar-tackers, automated buttonholers, and computerized multi-head embroidery systems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="iv2-metric-pillar">
+                            <div class="iv2-pillar-icon">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <div class="iv2-metric-number">150+</div>
+                            <div class="iv2-metric-title">Skilled Workforce</div>
+                            <p class="iv2-metric-text">
+                                Experienced master tailors, computerized pattern operators, quality assurance inspectors, and certified machine technicians ensuring 24/7 assembly coordination.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="iv2-metric-pillar">
+                            <div class="iv2-pillar-icon">
+                                <i class="bi bi-shield-fill-check"></i>
+                            </div>
+                            <div class="iv2-metric-number">100%</div>
+                            <div class="iv2-metric-title">Quality Assurance</div>
+                            <p class="iv2-metric-text">
+                                Rigorous multi-stage checkpoints covering raw tensile fabric inspection, dimensional tolerance, reinforced stress testing, and steam-sterilized packaging.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+             SECTION 3: WORKFLOW HUBS
+             Three Core Engineering Wings & Technical Specifications
+        ====================================================== -->
+        <section class="infra-v2-workflow" id="workflowHubs">
+            <div class="container">
+                
+                <div class="iv2-section-head">
+                    <div class="iv2-eyebrow">
+                        <i class="bi bi-diagram-3-fill"></i>
+                        <span>PRECISION WORKFLOW</span>
+                    </div>
+                    <h2 class="iv2-main-title">
+                        INTELLIGENT <span>MANUFACTURING HUBS</span>
+                    </h2>
+                    <p class="iv2-head-desc">
+                        From raw bolt roll intake to final sealed delivery, every garment travels through specialized engineering hubs designed for flawless dimensional conformity.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="iv2-hub-card">
+                            <div class="iv2-hub-badge">01 / STAGE</div>
+                            <h3 class="iv2-hub-title">Computerized CAD &amp; Pattern Layout</h3>
+                            <p class="iv2-hub-desc">
+                                Digital pattern engineering ensures zero-variance size consistency across thousands of pieces. Computerized fabric nesting optimizes yardage with minimal scrap generation while maintaining uniform grain alignment.
+                            </p>
+                            <ul class="iv2-hub-specs">
+                                <li><i class="bi bi-check-circle-fill"></i> Automated grading across complete size charts</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Laser-guided contour precision cutting</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Verified fabric shrinkage compensation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="iv2-hub-card">
+                            <div class="iv2-hub-badge">02 / STAGE</div>
+                            <h3 class="iv2-hub-title">Modular Stitching &amp; Embroidery Hub</h3>
+                            <p class="iv2-hub-desc">
+                                Purpose-built modular assembly lines handle distinct product sectors—including healthcare scrubs, industrial boiler suits, and formal corporate blazers—powered by high-tension multi-needle stitching heads.
+                            </p>
+                            <ul class="iv2-hub-specs">
+                                <li><i class="bi bi-check-circle-fill"></i> Heavy-duty stress-point bar-tacking</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Computerized multi-head corporate embroidery</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Double-stitched reinforced structural seams</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="iv2-hub-card">
+                            <div class="iv2-hub-badge">03 / STAGE</div>
+                            <h3 class="iv2-hub-title">Steam Finishing &amp; Dispatch Terminal</h3>
+                            <p class="iv2-hub-desc">
+                                Finished garments undergo multi-point inspection before proceeding to industrial vacuum form press tables and sanitizing steam tunnels, emerging completely wrinkle-free and sealed for nationwide institutional distribution.
+                            </p>
+                            <ul class="iv2-hub-specs">
+                                <li><i class="bi bi-check-circle-fill"></i> Vacuum form steam pressing &amp; sanitization</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Colorfastness &amp; thread integrity clearance</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Barcode-indexed institutional batch packing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+             SECTION 4: SOCIAL EMPOWERMENT & SATELLITE UNITS
+             Deep Amethyst Theme, Rural Centres (Madanthyar & Vamanjoor)
+        ====================================================== -->
+        <section class="infra-v2-social" id="socialCentres">
+            <div class="container">
+                <div class="row align-items-center g-4 g-xl-5">
+                    
+                    <div class="col-lg-6">
+                        <div class="iv2-social-panel">
+                            
+                            <div class="iv2-eyebrow text-white-50">
+                                <i class="bi bi-geo-alt-fill text-danger"></i>
+                                <span class="text-white">COMMUNITY &amp; CRAFTSMANSHIP</span>
+                            </div>
+
+                            <h2 class="iv2-main-title text-white">
+                                SATELLITE <span>STITCHING CENTRES</span>
+                            </h2>
+
+                            <p class="iv2-social-desc">
+                                Beyond our central manufacturing facility, SOWKAR actively drives social empowerment by operating dedicated satellite production units in <strong>Madanthyar</strong> and <strong>Vamanjoor</strong>[cite: 4]. We provide professional industrial tailoring training to rural women artisans, fostering economic independence while expanding our precision production network[cite: 4].
+                            </p>
+
+                            <div class="iv2-satellite-box">
+                                <h4><i class="bi bi-building-check"></i> Madanthyar Production Unit</h4>
+                                <p>Specialized center dedicated to medical scrubs, lab coats, and healthcare protective gowns[cite: 4], employing over 60 trained women artisans operating specialized lockstitch workstations.</p>
+                            </div>
+
+                            <div class="iv2-satellite-box">
+                                <h4><i class="bi bi-building-check"></i> Vamanjoor Production Unit</h4>
+                                <p>High-volume institutional uniform assembly hub handling school, college, and hospitality uniforms[cite: 3, 4], outfitted with automated button-attaching and precision collar-forming machinery.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="iv2-social-visual-wrap">
+                            <img src="images/about-us-content-img-1.png" alt="SOWKAR Women Artisan Craftsmanship & Training Facility" />
+                            <div class="iv2-social-banner">
+                                <i class="bi bi-award-fill"></i>
+                                <span>Vocational Skill Development &amp; Sustainable Livelihood</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             SECTION 5: CTA SECTION
+             Consistent Brand Finishing & Direct Engagement
+        ====================================================== -->
+        <section class="infra-v2-cta" id="infraCta">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10 col-lg-11">
+
+                        <div class="sowkar-cta-content text-center">
+
+                            <div class="sowkar-cta-label">
+                                SCALE YOUR UNIFORM PROGRAM
+                            </div>
+
+                            <div class="sowkar-cta-line"></div>
+
+                            <h2 class="sowkar-cta-heading">
+                                Partner with Our
+                                <span>Manufacturing Facility</span>
+                            </h2>
+
+                            <p class="sowkar-cta-text">
+                                Connect with our technical procurement specialists for custom fabric consultation, sample development, and contract institutional manufacturing.
+                            </p>
+
+                            <div class="sowkar-cta-buttons">
+                                <a href="/enquiry" class="sowkar-cta-btn sowkar-cta-btn-primary">
+                                    <span>REQUEST INFRASTRUCTURE TOUR</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+
+                                <a href="/contact-us" class="sowkar-cta-btn sowkar-cta-btn-outline">
+                                    TALK TO PRODUCTION HEAD
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <!-- =====================================================
+         FOOTER (Site Master Component)
+    ====================================================== -->
+    <footer class="sowkar-footer">
+        <div class="container">
+            <div class="row sowkar-footer-main">
+
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="sowkar-footer-brand">
+                        <a href="index.html" class="sowkar-footer-logo">
+                            <img src="images/sowkar-textiles-logo1.png" class="img-fluid" alt="Sowkar Textiles &amp; Uniforms Logo" />
+                        </a>
+                        <div class="sowkar-footer-line"></div>
+                        <div class="sowkar-footer-tagline">
+                            QUALITY WEAR<br>
+                            FOR A BRIGHTER TOMORROW
+                        </div>
+                        <p>Your trusted partner for premium textiles, uniforms and customized apparel solutions.</p>
+                    </div>
+
+                    <div class="sowkar-footer-social">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/sowkar_uniforms/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <!-- <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a> -->
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <div class="sowkar-footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+                            <li><a href="sowkar-textiles-about-us.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+                            <li><a href="#products"><i class="bi bi-chevron-right"></i> Products</a></li>
+                            <li><a href="sowkar-textiles-infrastructure.html"><i class="bi bi-chevron-right"></i> Infrastructure</a></li>
+                            <li><a href="/clients"><i class="bi bi-chevron-right"></i> Our Clients</a></li>
+                            <li><a href="#testimonials"><i class="bi bi-chevron-right"></i> Testimonials</a></li>
+                            <li><a href="/contact-us"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="sowkar-footer-column">
+                        <h3>Our Products</h3>
+                        <ul>
+                            <li><a href="#corporate"><i class="bi bi-chevron-right"></i> Corporate Uniforms</a></li>
+                            <li><a href="#healthcare"><i class="bi bi-chevron-right"></i> Healthcare</a></li>
+                            <li><a href="#education"><i class="bi bi-chevron-right"></i> Education Uniforms</a></li>
+                            <li><a href="#hospitality"><i class="bi bi-chevron-right"></i> Hospitality</a></li>
+                            <li><a href="#industry"><i class="bi bi-chevron-right"></i> Industry</a></li>
+                            <li><a href="#tshirts"><i class="bi bi-chevron-right"></i> T-Shirts</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="sowkar-footer-column sowkar-footer-contact">
+                        <h3>Contact Us</h3>
+                        <div class="sowkar-contact-item">
+                            <div class="sowkar-contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div>
+                                <span>Bhola Building, Behind Kankanady Market</span>
+                                <span>Kankanady, Mangalore – 575002</span>
+                            </div>
+                        </div>
+
+                        <div class="sowkar-contact-item">
+                            <div class="sowkar-contact-icon"><i class="bi bi-telephone-fill"></i></div>
+                            <div>
+                                <a href="tel:+919611544600">+91 96115 44600</a>
+                                <a href="tel:+919739266396">+91 97392 66396</a>
+                                <a href="tel:+918277194657">+91 82771 94657</a>
+                            </div>
+                        </div>
+
+                        <div class="sowkar-contact-item">
+                            <div class="sowkar-contact-icon"><i class="bi bi-envelope-fill"></i></div>
+                            <div>
+                                <a href="mailto:sowkartex@rediffmail.com">sowkartex@rediffmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="sowkar-footer-contact-divider"></div>
+
+                        <div class="sowkar-working-hours">
+                            <h4>Working Hours</h4>
+                            <div class="sowkar-hours-row">
+                                <i class="bi bi-clock-fill"></i>
+                                <div>
+                                    <span>Monday - Saturday</span>
+                                    <strong>9:00 AM - 5:30 PM</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sowkar-footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>© 2026 SOWKAR TEXTILES &amp; UNIFORMS. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="sowkar-powered-by">
+                            Powered by <a href="https://www.bluelinecomputers.com/" target="_blank" rel="noopener noreferrer">Blueline Computers</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP WIDGET -->
+    <a href="https://wa.me/919611544600?text=Hello%20SOWKAR%20Textiles%20%26%20Uniforms%2C%20I%20would%20like%20to%20know%20more%20about%20your%20infrastructure." class="sowkar-whatsapp" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="left" title="Chat with us on WhatsApp" aria-label="Chat with SOWKAR on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- HEADER JAVASCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sowkarHeader = document.getElementById("sowkarMainHeader");
+            const sowkarProductsMenu = document.querySelector(".sowkar-products-menu");
+            const sowkarProductsToggle = document.querySelector(".sowkar-products-toggle");
+            const sowkarProductsDropdown = document.querySelector(".sowkar-products-mega-menu");
+            const sowkarNavigation = document.getElementById("sowkarNavigation");
+            const sowkarCloseButton = document.querySelector(".sowkar-offcanvas-close");
+            let sowkarHoverTimeout = null;
+            let sowkarScrollTick = false;
+
+            function sowkarIsDesktop() {
+                return window.innerWidth >= 992;
+            }
+
+            function sowkarUpdateHeader() {
+                if (window.scrollY > 50) {
+                    if (!sowkarHeader.classList.contains("sowkar-header-scrolled")) {
+                        sowkarHeader.classList.add("sowkar-header-scrolled");
+                    }
+                } else {
+                    sowkarHeader.classList.remove("sowkar-header-scrolled");
+                }
+                sowkarScrollTick = false;
+            }
+
+            window.addEventListener("scroll", function () {
+                if (!sowkarScrollTick) {
+                    window.requestAnimationFrame(sowkarUpdateHeader);
+                    sowkarScrollTick = true;
+                }
+            }, { passive: true });
+
+            sowkarUpdateHeader();
+
+            function sowkarOpenProducts() {
+                if (!sowkarIsDesktop()) return;
+                clearTimeout(sowkarHoverTimeout);
+                sowkarProductsMenu.classList.add("show");
+                sowkarProductsDropdown.classList.add("show");
+                sowkarProductsToggle.setAttribute("aria-expanded", "true");
+            }
+
+            function sowkarCloseProducts(immediate = false) {
+                if (!sowkarIsDesktop()) return;
+                clearTimeout(sowkarHoverTimeout);
+                const doClose = function () {
+                    sowkarProductsMenu.classList.remove("show");
+                    sowkarProductsDropdown.classList.remove("show");
+                    sowkarProductsToggle.setAttribute("aria-expanded", "false");
+                };
+                if (immediate) {
+                    doClose();
+                } else {
+                    sowkarHoverTimeout = setTimeout(doClose, 180);
+                }
+            }
+
+            sowkarProductsMenu.addEventListener("mouseenter", function () {
+                if (sowkarIsDesktop()) sowkarOpenProducts();
+            });
+
+            sowkarProductsMenu.addEventListener("mouseleave", function () {
+                if (sowkarIsDesktop()) sowkarCloseProducts();
+            });
+
+            sowkarProductsDropdown.addEventListener("mouseenter", function () {
+                if (sowkarIsDesktop()) clearTimeout(sowkarHoverTimeout);
+            });
+
+            sowkarProductsDropdown.addEventListener("mouseleave", function () {
+                if (sowkarIsDesktop()) sowkarCloseProducts();
+            });
+
+            sowkarProductsToggle.addEventListener("click", function (event) {
+                if (sowkarIsDesktop()) {
+                    event.preventDefault();
+                    clearTimeout(sowkarHoverTimeout);
+                    if (sowkarProductsMenu.classList.contains("show")) {
+                        sowkarCloseProducts(true);
+                    } else {
+                        sowkarOpenProducts();
+                    }
+                }
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!sowkarIsDesktop()) return;
+                if (!sowkarProductsMenu.contains(event.target)) {
+                    sowkarCloseProducts(true);
+                }
+            });
+
+            if (sowkarCloseButton) {
+                sowkarCloseButton.addEventListener("click", function () {
+                    const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(sowkarNavigation);
+                    offcanvas.hide();
+                });
+            }
+
+            const whatsappTooltip = document.querySelector('.sowkar-whatsapp[data-bs-toggle="tooltip"]');
+            if (whatsappTooltip) {
+                new bootstrap.Tooltip(whatsappTooltip);
+            }
+        });
+    </script>
+</body>
+</html>
