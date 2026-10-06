@@ -226,12 +226,11 @@
                     <!-- Visit Us -->
                     <div class="cc-card">
                         <div class="cc-card-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                        <h3>Visit Our Office</h3>
-                        <p>Bhola Building, <br>
-                             behind Kankanady Market,<br> Kankanady, Mangalore – 575002, <br> Karnataka, India.</p>
+                        <h3>Visit Our Locations</h3>
+                        <p><strong>Main Branch:</strong> Bhola Building, behind Kankanady Market, Kankanady, Mangalore – 575002.<br><br><strong>Branch:</strong> Sowkar Textiles &amp; Uniforms, Mallikatte, Mangalore – 575002.</p>
                         <div class="cc-card-links">
                             <a href="#contactFormSection">
-                                <i class="bi bi-geo"></i> Get Directions
+                                <i class="bi bi-geo"></i> View on Map
                             </a>
                         </div>
                     </div>
@@ -406,26 +405,74 @@
                         </div>
                     </div>
 
-                    <!-- Map -->
+                    <!-- Map Card with Branch Switcher Tabs -->
                     <div class="cf-map-card">
 
-                        <div class="cf-map-frame">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.6080491254816!2d74.8538476750747!3d12.868573287437426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a336d505b6b%3A0x89d2cbf9413bca07!2sSowkar%20Textiles%20%26%20Uniforms%20Mangalore!5e0!3m2!1sen!2sin!4v1790414846309!5m2!1sen!2sin"
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                                title="Sowkar Textiles Location Map"></iframe>
-
-                            <div class="cf-map-overlay">
-                                <div class="cf-map-overlay-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                                <div class="cf-map-overlay-text">
-                                    <strong>Sowkar Textiles &amp; Uniforms</strong>
-                                    <span>Kankanady, Mangalore – 575002</span>
-                                </div>
-                                <a href="https://maps.google.com/?q=Kankanady+Market+Mangalore" target="_blank" rel="noopener noreferrer" class="cf-map-overlay-link" aria-label="Open in Google Maps">
-                                    <i class="bi bi-arrow-up-right"></i>
-                                </a>
+                        <!-- Map Tabs Header -->
+                        <div class="cf-map-header">
+                            <div class="cf-map-title">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>Our Locations</span>
                             </div>
+                            <div class="cf-map-tabs" role="tablist" aria-label="Branch Locations">
+                                <button type="button" class="cf-map-tab active" id="tab-kankanady" role="tab" aria-selected="true" aria-controls="map-panel-kankanady" data-map-target="kankanady">
+                                    <span class="cf-map-tab-dot"></span>
+                                    <i class="bi bi-buildings"></i>
+                                    <span>Kankanady <em>(Main)</em></span>
+                                </button>
+                                <button type="button" class="cf-map-tab" id="tab-mallikatte" role="tab" aria-selected="false" aria-controls="map-panel-mallikatte" data-map-target="mallikatte">
+                                    <span class="cf-map-tab-dot"></span>
+                                    <i class="bi bi-shop"></i>
+                                    <span>Mallikatte <em>(Branch)</em></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Map Panels Frame -->
+                        <div class="cf-map-frame">
+
+                            <!-- Kankanady Map Panel -->
+                            <div class="cf-map-panel active" id="map-panel-kankanady" role="tabpanel" aria-labelledby="tab-kankanady">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.6080491254816!2d74.8538476750747!3d12.868573287437426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a336d505b6b%3A0x89d2cbf9413bca07!2sSowkar%20Textiles%20%26%20Uniforms%20Mangalore!5e0!3m2!1sen!2sin!4v1790414846309!5m2!1sen!2sin"
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    allowfullscreen=""
+                                    title="Sowkar Textiles Kankanady Location Map"></iframe>
+
+                                <div class="cf-map-overlay">
+                                    <div class="cf-map-overlay-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                                    <div class="cf-map-overlay-text">
+                                        <strong>Sowkar Textiles &amp; Uniforms</strong>
+                                        <span>Bhola Building, behind Kankanady Market, Mangalore – 575002</span>
+                                    </div>
+                                    <a href="https://maps.google.com/?q=Sowkar+Textiles+%26+Uniforms+Mangalore" target="_blank" rel="noopener noreferrer" class="cf-map-overlay-link" aria-label="Open Kankanady in Google Maps" title="Open in Google Maps">
+                                        <i class="bi bi-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Mallikatte Map Panel -->
+                            <div class="cf-map-panel" id="map-panel-mallikatte" role="tabpanel" aria-labelledby="tab-mallikatte">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11001.202501063255!2d74.84614444986371!3d12.874736317410388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35bcf64ee8a29%3A0xb860365b04464902!2sSowkar%20textiles%20and%20uniforms%20Mallikatte!5e0!3m2!1sen!2sin!4v1791001285080!5m2!1sen!2sin"
+                                    loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen=""
+                                    title="Sowkar Textiles Mallikatte Location Map"></iframe>
+
+                                <div class="cf-map-overlay">
+                                    <div class="cf-map-overlay-icon"><i class="bi bi-shop"></i></div>
+                                    <div class="cf-map-overlay-text">
+                                        <strong>Sowkar Textiles and Uniforms</strong>
+                                        <span>Mallikatte Branch, Mangalore – 575002</span>
+                                    </div>
+                                    <a href="https://maps.google.com/?q=Sowkar+textiles+and+uniforms+Mallikatte" target="_blank" rel="noopener noreferrer" class="cf-map-overlay-link" aria-label="Open Mallikatte in Google Maps" title="Open in Google Maps">
+                                        <i class="bi bi-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -971,6 +1018,39 @@
                 revealSections.forEach(function (section) {
                     section.classList.add("is-visible");
                     section.classList.add("in-view");
+                });
+            }
+        });
+    </script>
+
+    <!-- MAP TAB SWITCHER (KANKANADY & MALLIKATTE) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mapTabs = document.querySelectorAll(".cf-map-tab");
+            const mapPanels = document.querySelectorAll(".cf-map-panel");
+
+            if (mapTabs.length > 0) {
+                mapTabs.forEach(function (tab) {
+                    tab.addEventListener("click", function () {
+                        const target = this.getAttribute("data-map-target");
+
+                        // Update tabs active state & accessibility attributes
+                        mapTabs.forEach(function (t) {
+                            t.classList.remove("active");
+                            t.setAttribute("aria-selected", "false");
+                        });
+                        this.classList.add("active");
+                        this.setAttribute("aria-selected", "true");
+
+                        // Switch map panels
+                        mapPanels.forEach(function (panel) {
+                            panel.classList.remove("active");
+                        });
+                        const activePanel = document.getElementById("map-panel-" + target);
+                        if (activePanel) {
+                            activePanel.classList.add("active");
+                        }
+                    });
                 });
             }
         });

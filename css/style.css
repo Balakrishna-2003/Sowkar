@@ -136,6 +136,7 @@ figure {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
 }
 
 button {
@@ -17256,15 +17257,123 @@ button {
     animation: cFadeUp .85s cubic-bezier(.16, 1, .3, 1) .76s forwards;
 }
 
+/* Map Header with Tabs */
+.cf-map-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #1f0b2a 0%, #35124f 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    z-index: 5;
+}
+
+.cf-map-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Urbanist", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+.cf-map-title i {
+    color: var(--sowkar-red-light);
+    font-size: 15px;
+}
+
+.cf-map-tabs {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 4px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    gap: 4px;
+}
+
+.cf-map-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    border-radius: 20px;
+    border: 0;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: "Montserrat", sans-serif;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .25s ease;
+    white-space: nowrap;
+    outline: none;
+    user-select: none;
+}
+
+.cf-map-tab em {
+    font-style: normal;
+    font-size: 10px;
+    opacity: 0.75;
+    font-weight: 500;
+}
+
+.cf-map-tab .cf-map-tab-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    transition: all .25s ease;
+}
+
+.cf-map-tab:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.cf-map-tab.active {
+    background: linear-gradient(135deg, var(--sowkar-red), #df5b6e);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(201, 75, 92, 0.40);
+}
+
+.cf-map-tab.active .cf-map-tab-dot {
+    background: #ffffff;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.9);
+}
+
 .cf-map-frame {
     position: relative;
     flex: 1;
-    min-height: 320px;
+    min-height: 340px;
     background: #EFE6EE;
     overflow: hidden;
 }
 
-.cf-map-frame iframe {
+.cf-map-panel {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .35s ease, visibility .35s ease;
+}
+
+.cf-map-panel.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.cf-map-panel iframe {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -17348,9 +17457,29 @@ button {
 }
 
 .cf-map-info {
-    padding: 26px 28px;
+    padding: 22px 24px;
     background: #ffffff;
     border-top: 1px solid rgba(53, 18, 79, 0.08);
+}
+
+.cf-map-info-content {
+    display: none;
+    animation: cFadeIn .35s ease forwards;
+}
+
+.cf-map-info-content.active {
+    display: block;
+}
+
+@keyframes cFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .cf-map-info-row {
@@ -18262,8 +18391,33 @@ button {
         border-radius: 16px;
     }
 
+    .cf-map-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 12px 14px;
+    }
+
+    .cf-map-title {
+        font-size: 13px;
+        justify-content: center;
+    }
+
+    .cf-map-tabs {
+        width: 100%;
+        display: flex;
+    }
+
+    .cf-map-tab {
+        flex: 1;
+        justify-content: center;
+        padding: 6px 8px;
+        font-size: 10px;
+        gap: 5px;
+    }
+
     .cf-map-frame {
-        min-height: 260px;
+        min-height: 280px;
     }
 
     .cf-map-overlay {
@@ -22877,7 +23031,7 @@ button {
 
 .scrub-card--top {
     width: 36%;
-    height: 155px;
+    height: fit-content;
     align-self: flex-start;
     z-index: 2;
     animation-delay: 0.5s;
@@ -22885,7 +23039,7 @@ button {
 
 .scrub-card--bottom {
     width: 36%;
-    height: 130px;
+    height: fit-content;
     align-self: flex-end;
     z-index: 4;
     animation-delay: 0.65s;
@@ -23167,33 +23321,33 @@ button {
 /* Top Gender Toggle Switcher */
 .sowkar-bedsheets-page .scrub-gender-toggle-bar {
     position: absolute;
-    top: 18px;
-    left: 18px;
+    top: 12px;
+    left: 12px;
     z-index: 8;
     display: inline-flex;
     align-items: center;
-    padding: 4px;
-    background: rgba(22, 11, 32, 0.75);
+    padding: 2.5px;
+    background: rgba(22, 11, 32, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 30px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
 }
 
 .sowkar-bedsheets-page .scrub-gender-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
+    gap: 4px;
+    padding: 4px 10px;
     border: none;
-    border-radius: 20px;
+    border-radius: 16px;
     background: transparent;
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.80);
     font-family: "Montserrat", sans-serif;
-    font-size: 10.5px;
+    font-size: 9px;
     font-weight: 600;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -23201,7 +23355,7 @@ button {
 }
 
 .sowkar-bedsheets-page .scrub-gender-btn i {
-    font-size: 12px;
+    font-size: 10px;
     transition: color 0.3s ease;
 }
 
@@ -23214,7 +23368,7 @@ button {
     background: linear-gradient(135deg, #C94B5C, #9B3F8F);
     color: #ffffff;
     font-weight: 700;
-    box-shadow: 0 4px 14px rgba(201, 75, 92, 0.45);
+    box-shadow: 0 4px 12px rgba(201, 75, 92, 0.40);
 }
 
 .sowkar-bedsheets-page .scrub-gender-btn.active i {
@@ -23993,7 +24147,7 @@ button {
 
 .sowkar-corporate-page .scrub-card--top {
     width: 36%;
-    height: 155px;
+    height: fit-content;
     align-self: flex-start;
     z-index: 2;
     animation-delay: 0.5s;
@@ -24001,7 +24155,7 @@ button {
 
 .sowkar-corporate-page .scrub-card--bottom {
     width: 36%;
-    height: 130px;
+    height: fit-content;
     align-self: flex-end;
     z-index: 4;
     animation-delay: 0.65s;
@@ -25273,7 +25427,7 @@ button {
 
 .sowkar-doctor-coats-page .scrub-card--top {
     width: 36%;
-    height: 200px;
+    height: fit-content;
     align-self: flex-start;
     z-index: 2;
     animation-delay: 0.5s;
@@ -25281,7 +25435,7 @@ button {
 
 .sowkar-doctor-coats-page .scrub-card--bottom {
     width: 36%;
-    height: 190px;
+    height: fit-content;
     align-self: flex-end;
     z-index: 4;
     animation-delay: 0.65s;
@@ -25998,11 +26152,11 @@ button {
     }
 
     .sowkar-doctor-coats-page .scrub-card--top {
-        height: 120px;
+        /* height: 120px; */
     }
 
     .sowkar-doctor-coats-page .scrub-card--bottom {
-        height: 95px;
+        /* height: 95px; */
     }
 
     .sowkar-doctor-coats-page .scrub-visual-badge {
@@ -26423,7 +26577,7 @@ button {
 
 .sowkar-education-page .scrub-card--top {
     width: 36%;
-    height: 155px;
+    height: fit-content;
     align-self: flex-start;
     z-index: 2;
     animation-delay: 0.5s;
@@ -26431,7 +26585,7 @@ button {
 
 .sowkar-education-page .scrub-card--bottom {
     width: 36%;
-    height: 130px;
+    height: fit-content;
     align-self: flex-end;
     z-index: 4;
     animation-delay: 0.65s;
@@ -28695,7 +28849,7 @@ button {
 
 .sowkar-hospital-staff-page .scrub-card--top {
     width: 36%;
-    height: 155px;
+    height: fit-content;
     align-self: flex-start;
     z-index: 2;
     animation-delay: 0.5s;
@@ -28703,7 +28857,7 @@ button {
 
 .sowkar-hospital-staff-page .scrub-card--bottom {
     width: 36%;
-    height: 130px;
+    height: fit-content;
     align-self: flex-end;
     z-index: 4;
     animation-delay: 0.65s;
@@ -28920,33 +29074,33 @@ button {
 /* Top Gender Toggle Switcher */
 .sowkar-hospital-staff-page .scrub-gender-toggle-bar {
     position: absolute;
-    top: 18px;
-    left: 18px;
+    top: 12px;
+    left: 12px;
     z-index: 8;
     display: inline-flex;
     align-items: center;
-    padding: 4px;
-    background: rgba(22, 11, 32, 0.75);
+    padding: 2.5px;
+    background: rgba(22, 11, 32, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 30px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
 }
 
 .sowkar-hospital-staff-page .scrub-gender-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
+    gap: 4px;
+    padding: 4px 10px;
     border: none;
-    border-radius: 20px;
+    border-radius: 16px;
     background: transparent;
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.80);
     font-family: "Montserrat", sans-serif;
-    font-size: 10.5px;
+    font-size: 9px;
     font-weight: 600;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -28954,7 +29108,7 @@ button {
 }
 
 .sowkar-hospital-staff-page .scrub-gender-btn i {
-    font-size: 12px;
+    font-size: 10px;
     transition: color 0.3s ease;
 }
 
@@ -28967,7 +29121,7 @@ button {
     background: linear-gradient(135deg, #C94B5C, #9B3F8F);
     color: #ffffff;
     font-weight: 700;
-    box-shadow: 0 4px 14px rgba(201, 75, 92, 0.45);
+    box-shadow: 0 4px 12px rgba(201, 75, 92, 0.40);
 }
 
 .sowkar-hospital-staff-page .scrub-gender-btn.active i {
@@ -29402,13 +29556,13 @@ button {
     .sowkar-hospital-staff-page .scrub-card--main {
         height: 230px;
     }
-
+ 
     .sowkar-hospital-staff-page .scrub-card--top {
-        height: 120px;
+        /* height: 120px; */
     }
 
     .sowkar-hospital-staff-page .scrub-card--bottom {
-        height: 95px;
+        /* height: 95px; */
     }
 
     .sowkar-hospital-staff-page .scrub-visual-badge {
@@ -29844,7 +29998,7 @@ button {
 
 .sowkar-hospitality-page .scrub-card--top {
     width: 36%;
-    height: 155px;
+    height: fit-content;
     align-self: flex-start;
     z-index: 2;
     animation-delay: 0.5s;
@@ -29852,7 +30006,7 @@ button {
 
 .sowkar-hospitality-page .scrub-card--bottom {
     width: 36%;
-    height: 130px;
+    height: fit-content;
     align-self: flex-end;
     z-index: 4;
     animation-delay: 0.65s;
@@ -31221,7 +31375,7 @@ button {
 
 .sowkar-industry-page .scrub-card--top {
     width: 36%;
-    height: 155px;
+    height: fit-content;
     align-self: flex-start;
     z-index: 2;
     animation-delay: 0.5s;
@@ -31229,7 +31383,7 @@ button {
 
 .sowkar-industry-page .scrub-card--bottom {
     width: 36%;
-    height: 130px;
+    height: fit-content;
     align-self: flex-end;
     z-index: 4;
     animation-delay: 0.65s;
@@ -32598,7 +32752,7 @@ button {
 
 .sowkar-lab-coats-page .scrub-card--top {
     width: 36%;
-    height: 200px;
+    height: fit-content;
     align-self: flex-start;
     z-index: 2;
     animation-delay: 0.5s;
@@ -32606,7 +32760,7 @@ button {
 
 .sowkar-lab-coats-page .scrub-card--bottom {
     width: 36%;
-    height: 190px;
+    height: fit-content;
     align-self: flex-end;
     z-index: 4;
     animation-delay: 0.65s;
@@ -32900,40 +33054,40 @@ button {
 /* Top Gender Toggle Switcher */
 .sowkar-lab-coats-page .scrub-gender-toggle-bar {
     position: absolute;
-    top: 18px;
-    left: 18px;
+    top: 12px;
+    left: 12px;
     z-index: 8;
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    padding: 4px 6px;
-    background: rgba(25, 12, 36, 0.82);
+    padding: 2.5px;
+    background: rgba(22, 11, 32, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 40px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
 }
 
 .sowkar-lab-coats-page .scrub-gender-btn {
     border: none;
     background: transparent;
-    color: rgba(255, 255, 255, 0.72);
+    color: rgba(255, 255, 255, 0.80);
     font-family: "Montserrat", sans-serif;
-    font-size: 11.5px;
+    font-size: 9px;
     font-weight: 600;
-    letter-spacing: 0.8px;
-    padding: 6px 14px;
-    border-radius: 30px;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 16px;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sowkar-lab-coats-page .scrub-gender-btn i {
-    font-size: 13px;
+    font-size: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -32945,11 +33099,11 @@ button {
 .sowkar-lab-coats-page .scrub-gender-btn.active {
     color: #ffffff;
     background: linear-gradient(135deg, #9B3F8F 0%, #C94B5C 100%);
-    box-shadow: 0 4px 14px rgba(201, 75, 92, 0.45);
+    box-shadow: 0 4px 12px rgba(201, 75, 92, 0.40);
 }
 
 .sowkar-lab-coats-page .scrub-gender-btn.active i {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Nav Chevrons */
@@ -33302,11 +33456,11 @@ button {
     }
 
     .sowkar-lab-coats-page .scrub-card--top {
-        height: 145px;
+        /* height: 145px; */
     }
 
     .sowkar-lab-coats-page .scrub-card--bottom {
-        height: 115px;
+        /* height: 115px; */
     }
 
     .sowkar-lab-coats-page .scrub-spec-row,
@@ -33357,11 +33511,11 @@ button {
     }
 
     .sowkar-lab-coats-page .scrub-card--top {
-        height: 120px;
+        /* height: 120px; */
     }
 
     .sowkar-lab-coats-page .scrub-card--bottom {
-        height: 95px;
+        /* height: 95px; */
     }
 
     .sowkar-lab-coats-page .scrub-visual-badge {
@@ -34197,7 +34351,7 @@ button {
 
 .sowkar-nurse-uniforms-page .scrub-card--top {
     width: 36%;
-    height: 200px;
+    height: fit-content;
     align-self: flex-start;
     z-index: 2;
     animation-delay: 0.5s;
@@ -34205,7 +34359,7 @@ button {
 
 .sowkar-nurse-uniforms-page .scrub-card--bottom {
     width: 36%;
-    height: 190px;
+    height: fit-content;
     align-self: flex-end;
     z-index: 4;
     animation-delay: 0.65s;
@@ -34499,40 +34653,40 @@ button {
 /* Top Gender Toggle Switcher */
 .sowkar-nurse-uniforms-page .scrub-gender-toggle-bar {
     position: absolute;
-    top: 18px;
-    left: 18px;
+    top: 12px;
+    left: 12px;
     z-index: 8;
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    padding: 4px 6px;
-    background: rgba(25, 12, 36, 0.82);
+    padding: 2.5px;
+    background: rgba(22, 11, 32, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 40px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
 }
 
 .sowkar-nurse-uniforms-page .scrub-gender-btn {
     border: none;
     background: transparent;
-    color: rgba(255, 255, 255, 0.72);
+    color: rgba(255, 255, 255, 0.80);
     font-family: "Montserrat", sans-serif;
-    font-size: 11.5px;
+    font-size: 9px;
     font-weight: 600;
-    letter-spacing: 0.8px;
-    padding: 6px 14px;
-    border-radius: 30px;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 16px;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sowkar-nurse-uniforms-page .scrub-gender-btn i {
-    font-size: 13px;
+    font-size: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -34544,11 +34698,11 @@ button {
 .sowkar-nurse-uniforms-page .scrub-gender-btn.active {
     color: #ffffff;
     background: linear-gradient(135deg, #9B3F8F 0%, #C94B5C 100%);
-    box-shadow: 0 4px 14px rgba(201, 75, 92, 0.45);
+    box-shadow: 0 4px 12px rgba(201, 75, 92, 0.40);
 }
 
 .sowkar-nurse-uniforms-page .scrub-gender-btn.active i {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Nav Chevrons */
@@ -35289,11 +35443,11 @@ button {
     }
 
     .sowkar-nurse-uniforms-page .scrub-card--top {
-        height: 120px;
+        /* height: 120px; */
     }
 
     .sowkar-nurse-uniforms-page .scrub-card--bottom {
-        height: 95px;
+        /* height: 95px; */
     }
 
     .sowkar-nurse-uniforms-page .scrub-visual-badge {
@@ -36015,40 +36169,40 @@ button {
 /* Top Gender Toggle Switcher */
 .sowkar-ot-gown-page .scrub-gender-toggle-bar {
     position: absolute;
-    top: 18px;
-    left: 18px;
+    top: 12px;
+    left: 12px;
     z-index: 8;
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    padding: 4px 6px;
-    background: rgba(25, 12, 36, 0.82);
+    padding: 2.5px;
+    background: rgba(22, 11, 32, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 40px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
 }
 
 .sowkar-ot-gown-page .scrub-gender-btn {
     border: none;
     background: transparent;
-    color: rgba(255, 255, 255, 0.72);
+    color: rgba(255, 255, 255, 0.80);
     font-family: "Montserrat", sans-serif;
-    font-size: 11.5px;
+    font-size: 9px;
     font-weight: 600;
-    letter-spacing: 0.8px;
-    padding: 6px 14px;
-    border-radius: 30px;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 16px;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sowkar-ot-gown-page .scrub-gender-btn i {
-    font-size: 13px;
+    font-size: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -36060,11 +36214,11 @@ button {
 .sowkar-ot-gown-page .scrub-gender-btn.active {
     color: #ffffff;
     background: linear-gradient(135deg, #9B3F8F 0%, #C94B5C 100%);
-    box-shadow: 0 4px 14px rgba(201, 75, 92, 0.45);
+    box-shadow: 0 4px 12px rgba(201, 75, 92, 0.40);
 }
 
 .sowkar-ot-gown-page .scrub-gender-btn.active i {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Nav Chevrons */
@@ -36442,11 +36596,11 @@ button {
     }
 
     .sowkar-ot-gown-page .scrub-card--top {
-        height: 170px;
+        /* height: 170px; */
     }
 
     .sowkar-ot-gown-page .scrub-card--bottom {
-        height: 135px;
+        /* height: 135px; */
     }
 
     .sowkar-ot-gown-page .scrub-spec-content {
@@ -36518,11 +36672,11 @@ button {
     }
 
     .sowkar-ot-gown-page .scrub-card--top {
-        height: 145px;
+        /* height: 145px; */
     }
 
     .sowkar-ot-gown-page .scrub-card--bottom {
-        height: 115px;
+        /* height: 115px; */
     }
 
     .sowkar-ot-gown-page .scrub-spec-row,
@@ -36678,11 +36832,11 @@ button {
     }
 
     .sowkar-ot-gown-page .scrub-card--top {
-        height: 120px;
+        /* height: 120px; */
     }
 
     .sowkar-ot-gown-page .scrub-card--bottom {
-        height: 95px;
+        /* height: 95px; */
     }
 
     .sowkar-ot-gown-page .scrub-visual-badge {
@@ -37160,7 +37314,7 @@ button {
 
 .sowkar-patient-gown-page .scrub-card--top {
     width: 36%;
-    height: 155px;
+    height: fit-content;
     align-self: flex-start;
     z-index: 2;
     animation-delay: 0.5s;
@@ -37168,7 +37322,7 @@ button {
 
 .sowkar-patient-gown-page .scrub-card--bottom {
     width: 36%;
-    height: 130px;
+    height: fit-content;
     align-self: flex-end;
     z-index: 4;
     animation-delay: 0.65s;
@@ -37395,33 +37549,33 @@ button {
 /* Top Gender Toggle Switcher */
 .sowkar-patient-gown-page .scrub-gender-toggle-bar {
     position: absolute;
-    top: 18px;
-    left: 18px;
+    top: 12px;
+    left: 12px;
     z-index: 8;
     display: inline-flex;
     align-items: center;
-    padding: 4px;
-    background: rgba(22, 11, 32, 0.75);
+    padding: 2.5px;
+    background: rgba(22, 11, 32, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 30px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
 }
 
 .sowkar-patient-gown-page .scrub-gender-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
+    gap: 4px;
+    padding: 4px 10px;
     border: none;
-    border-radius: 20px;
+    border-radius: 16px;
     background: transparent;
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.80);
     font-family: "Montserrat", sans-serif;
-    font-size: 10.5px;
+    font-size: 9px;
     font-weight: 600;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -37429,7 +37583,7 @@ button {
 }
 
 .sowkar-patient-gown-page .scrub-gender-btn i {
-    font-size: 12px;
+    font-size: 10px;
     transition: color 0.3s ease;
 }
 
@@ -37442,7 +37596,7 @@ button {
     background: linear-gradient(135deg, #C94B5C, #9B3F8F);
     color: #ffffff;
     font-weight: 700;
-    box-shadow: 0 4px 14px rgba(201, 75, 92, 0.45);
+    box-shadow: 0 4px 12px rgba(201, 75, 92, 0.40);
 }
 
 .sowkar-patient-gown-page .scrub-gender-btn.active i {
@@ -38068,11 +38222,11 @@ button {
     }
 
     .sowkar-patient-gown-page .scrub-card--top {
-        height: 145px;
+        /* height: 145px; */
     }
 
     .sowkar-patient-gown-page .scrub-card--bottom {
-        height: 115px;
+        /* height: 115px; */
     }
 
     .sowkar-patient-gown-page .scrub-spec-row,
@@ -38124,11 +38278,11 @@ button {
     }
 
     .sowkar-patient-gown-page .scrub-card--top {
-        height: 120px;
+        /* height: 120px; */
     }
 
     .sowkar-patient-gown-page .scrub-card--bottom {
-        height: 95px;
+        /* height: 95px; */
     }
 
     .sowkar-patient-gown-page .scrub-visual-badge {
@@ -39441,33 +39595,33 @@ button {
 /* Top Gender Toggle Switcher */
 .sowkar-scrub-suits-page .scrub-gender-toggle-bar {
     position: absolute;
-    top: 18px;
-    left: 18px;
+    top: 12px;
+    left: 12px;
     z-index: 8;
     display: inline-flex;
     align-items: center;
-    padding: 4px;
-    background: rgba(22, 11, 32, 0.75);
+    padding: 2.5px;
+    background: rgba(22, 11, 32, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 30px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
 }
 
 .sowkar-scrub-suits-page .scrub-gender-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
+    gap: 4px;
+    padding: 4px 10px;
     border: none;
-    border-radius: 20px;
+    border-radius: 16px;
     background: transparent;
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.80);
     font-family: "Montserrat", sans-serif;
-    font-size: 10.5px;
+    font-size: 9px;
     font-weight: 600;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -39475,7 +39629,7 @@ button {
 }
 
 .sowkar-scrub-suits-page .scrub-gender-btn i {
-    font-size: 12px;
+    font-size: 10px;
     transition: color 0.3s ease;
 }
 
@@ -39488,7 +39642,7 @@ button {
     background: linear-gradient(135deg, #C94B5C, #9B3F8F);
     color: #ffffff;
     font-weight: 700;
-    box-shadow: 0 4px 14px rgba(201, 75, 92, 0.45);
+    box-shadow: 0 4px 12px rgba(201, 75, 92, 0.40);
 }
 
 .sowkar-scrub-suits-page .scrub-gender-btn.active i {
@@ -40333,11 +40487,11 @@ button {
     }
 
     .sowkar-scrub-suits-page .scrub-card--top {
-        height: 105px;
+        /* height: 105px; */
     }
 
     .sowkar-scrub-suits-page .scrub-card--bottom {
-        height: 85px;
+        /* height: 85px; */
     }
 
     .sowkar-scrub-suits-page .scrub-visual-badge {
@@ -40393,8 +40547,8 @@ button {
     }
 
     .sowkar-scrub-suits-page .scrub-gender-btn {
-        padding: 5px 10px;
-        font-size: 9.5px;
+        padding: 3.5px 8px;
+        font-size: 8.5px;
     }
 
     .sowkar-scrub-suits-page .scrub-color-dot {
@@ -41156,33 +41310,33 @@ button {
 /* Top Gender Toggle Switcher */
 .sowkar-t-shirts-page .scrub-gender-toggle-bar {
     position: absolute;
-    top: 18px;
-    left: 18px;
+    top: 12px;
+    left: 12px;
     z-index: 8;
     display: inline-flex;
     align-items: center;
-    padding: 4px;
-    background: rgba(22, 11, 32, 0.75);
+    padding: 2.5px;
+    background: rgba(22, 11, 32, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 30px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
 }
 
 .sowkar-t-shirts-page .scrub-gender-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
+    gap: 4px;
+    padding: 4px 10px;
     border: none;
-    border-radius: 20px;
+    border-radius: 16px;
     background: transparent;
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.80);
     font-family: "Montserrat", sans-serif;
-    font-size: 10.5px;
+    font-size: 9px;
     font-weight: 600;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -41190,7 +41344,7 @@ button {
 }
 
 .sowkar-t-shirts-page .scrub-gender-btn i {
-    font-size: 12px;
+    font-size: 10px;
     transition: color 0.3s ease;
 }
 
@@ -41203,7 +41357,7 @@ button {
     background: linear-gradient(135deg, #C94B5C, #9B3F8F);
     color: #ffffff;
     font-weight: 700;
-    box-shadow: 0 4px 14px rgba(201, 75, 92, 0.45);
+    box-shadow: 0 4px 12px rgba(201, 75, 92, 0.40);
 }
 
 .sowkar-t-shirts-page .scrub-gender-btn.active i {
@@ -44116,3 +44270,86 @@ button {
         padding: 50px 0;
     }
 }
+
+/* =========================================================
+   UNIVERSAL COMPACT GENDER TOGGLE BAR
+========================================================= */
+.scrub-gender-toggle-bar {
+    top: 12px !important;
+    left: 12px !important;
+    padding: 2.5px !important;
+    border-radius: 24px !important;
+}
+
+.scrub-gender-btn {
+    padding: 4px 10px !important;
+    font-size: 9px !important;
+    letter-spacing: 0.5px !important;
+    gap: 4px !important;
+    border-radius: 16px !important;
+}
+
+.scrub-gender-btn i {
+    font-size: 10px !important;
+}
+
+@media (max-width: 575.98px) {
+    .scrub-gender-toggle-bar {
+        top: 10px !important;
+        left: 10px !important;
+        padding: 2px !important;
+    }
+    .scrub-gender-btn {
+        padding: 3.5px 8px !important;
+        font-size: 8.5px !important;
+        gap: 3px !important;
+    }
+}
+
+/* =========================================================
+   INFRASTRUCTURE PAGE LIGHTBOX PREVIEW FIX
+   (Scoped strictly to sowkar-textiles-infrastructure.html)
+========================================================= */
+.sowkar-infrastructure-page .sowkar-lightbox .slb-dialog {
+    width: auto;
+    max-width: min(94vw, 1000px);
+    max-height: 90vh;
+    background: #0d0413;
+}
+
+.sowkar-infrastructure-page .sowkar-lightbox .slb-media-wrap {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sowkar-infrastructure-page .sowkar-lightbox .slb-media-wrap figure {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 86vh;
+}
+
+.sowkar-infrastructure-page .sowkar-lightbox .slb-img {
+    width: auto;
+    height: auto;
+    max-width: min(92vw, 960px);
+    max-height: 86vh;
+    object-fit: contain;
+}
+
+@media (max-width: 767.98px) {
+    .sowkar-infrastructure-page .sowkar-lightbox .slb-dialog {
+        max-height: 85vh;
+    }
+    .sowkar-infrastructure-page .sowkar-lightbox .slb-img {
+        max-height: 80vh;
+        max-width: 92vw;
+    }
+}
